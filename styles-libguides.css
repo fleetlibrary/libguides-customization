@@ -1,1 +1,285 @@
 /*---Styles for application in LibGuides. May need to be slightly different from website styles--*/
+
+/*-------DO NOT REMOVE <script> and <style> TAGS--------------------*/
+/*-------THEY ARE REQUIRED within the libguides environment---------*/
+/*-------EVEN THOUGH they make this file ugly and dysfunctional!---------*/
+
+/* CURRENT ISSUES: */
+/* Box borders and footer not showing up */
+/* Need more space under breadcrumbs */
+
+/* RISD Font Inserts and Global Font Styles */
+
+@font-face {
+  font-family: 'RISD Complete';
+  src:url('https://d2jv02qf7xgjwx.cloudfront.net/sites/815/include/RISD_Serif_Complete-Light.otf')
+}
+
+@font-face {
+  font-family: 'RISD Sans';
+  src:url('https://d2jv02qf7xgjwx.cloudfront.net/sites/815/include/RISD_Sans-Regular.otf')
+}
+
+@font-face {
+  font-family: 'RISD Sans Italic';
+  src:url('https://d2jv02qf7xgjwx.cloudfront.net/sites/815/include/RISD_Sans-Regular_Italic.otf')
+}
+
+@font-face {
+  font-family: 'RISD Sans Bold';
+  src:url('https://d2jv02qf7xgjwx.cloudfront.net/sites/815/include/RISD_Sans-Bold.otf')
+}
+body, ul, p {
+  font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: #222222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'RISD Sans Bold', Arial, Helvetica, sans-serif;
+  font-style: strong;
+}
+
+strong {
+  font-family: 'RISD Sans Bold', Arial, Helvetica, sans-serif;
+}
+
+a {
+  font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
+  color: #2454FF;
+  weight: 400;
+  text-decoration: underline solid #000 auto;
+}
+
+a:hover {
+  color: #BE53F7;
+}
+
+a:focus {
+  color: #BE53F7;
+}
+
+a:visited {
+  color: #2454FF;
+  text-decoration: underline solid #000 auto;
+}
+
+a:visited:hover {
+  color: #BE53F7;
+}
+
+/*---------------------HEADER-----------------------*/
+/* Style the header with background and some padding */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+}
+
+/* Style the image/logo */
+.header img {
+  height: 50px;
+  width: auto;
+  display: block;
+  padding-left: 10px;
+}
+
+/* Style the navigation links container */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.header-nav li {
+  padding: 0;
+}
+
+.header-nav a {
+  float: none;
+  padding: 10px 10px;
+  color: #000000;
+  text-decoration: none;
+  text-decoration-color: #2454FF;
+  font-size: 16px;
+  font-family: 'RISD Sans Variable', Arial, Helvetica, sans-serif; 
+  font-style: regular;
+  line-height: 25px;
+}
+
+/* Change the menu on mouse-over */
+.header-nav .menu-li a:hover {
+  background: #2454FF;
+  color: #fff;
+}
+
+/* -----------DROPDOWN MENU----------- */
+
+/* Dropdown menu hidden by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  text-align: right;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+  font-family: 'RISD Sans Variable', Arial, Helvetica, sans-serif;
+  text-align: right; /* Optional: reinforces left alignment */
+}
+
+.dropdown-menu li a:hover {
+  background: #2454FF;
+  color: #fff;
+}
+
+/* style the dropdown MENU button */
+
+.nav-btn {
+  float: none; /* remove float */
+  padding: 10px 10px;
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'RISD Sans', Arial, Helvetica, sans-serif; 
+  font-weight: 100;
+  line-height: 25px;
+}
+
+.nav-btn:hover {
+  color: #fff;
+  background: #2454FF;
+  cursor: pointer;
+}
+
+
+/* Show dropdown on hover */
+.header-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.header-nav .dropdown:hover .dropdown-menu,
+.header-nav .dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+/* Responsive: stack and center header content on small screens */
+@media (max-width: 900px) {
+  .header-nav {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+  .header-nav .logo-li {
+    order: -1;
+    margin-bottom: 10px; /* adjust as needed */
+    padding: 0;          /* remove padding */
+  }
+  .header-nav .logo-li img {
+    display: block;
+    margin: 0 auto;      /* center logo if desired */
+    padding: 0;
+    max-width: 80vw;     /* responsive logo */
+    height: auto;
+  }
+  .header-nav li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/*--------ALTERATIONS TO LIBGUIDES DEFAULTS---------*/
+
+/*alter box header text */
+.s-lib-box .s-lib-box-title, .s-lib-public-side-header{
+  font-size: 1em;
+  letter-spacing: 1.6px;
+  font-family: 'RISD Sans Variable', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/*ensure floating boxes have padding*/
+.s-lib-floating-box{
+  padding: 10px;
+}
+
+
+/*alter tab size and text, normally inherited from body*/
+#s-lg-tabs-container .nav-tabs > li > a, #s-lg-tabs-container .nav-pills > li > a, #s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link, #s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link:hover {
+  margin-top: 5px;
+  padding: 5px 10px;
+  font-size: 1em;
+  letter-spacing: .8px;
+  text-decoration: none;
+}
+
+/*Remove underlining from sub-tabs in menu*/
+.list-group-item a {
+    text-decoration: none;
+}
+
+/*alter guide title*/
+
+#s-lg-guide-header-info h1, .s-lib-header h1 {
+  font-family: 'RISD Complete', Georgia, 'Times New Roman', Times, serif;
+  font-weight: 500;
+  font-size: 2.5em;
+  color: #2454FF;
+}
+
+#s-lg-guide-header-info {
+  padding-bottom: 10px;
+}
+
+/*--------------FOOTER AREA--------------*/
+
+html, body {
+  overflow-x: hidden;
+}
+
+.footer {
+  background: #111;
+  padding: 30px;
+  margin-top: 60px;
+  text-align: left;
+  max-width: 100% !important;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'RISD Sans Variable', Arial, sans-serif;
+}
+
+.footer-login {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #F5F5F3;
+  text-align:center;
+}
+.footer-login a {
+color: #2454FF;
+}
+</style>
