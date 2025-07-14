@@ -89,15 +89,35 @@ a:visited:hover {
 
 /* Style the navigation links container */
 .header-nav {
-  display: flex;
+  display: flex !important;
   align-items: center;
-  gap: 1.5rem;
+  width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 100%;
+  background: #fff;
+  gap: 1.5rem;
 }
 
+/* Logo stays left, menu floats right */
+.header-nav .logo-li {
+  margin-right: auto !important;
+  padding-left: 0 !important;
+}
+
+/* Remove any floats or alignment from menu items */
+.header-nav .menu-li,
+.header-nav .dropdown {
+  float: none !important;
+  margin: 0 !important;
+  padding: 0 10px !important;
+}
+
+/* Optional: keep dropdown menu aligned right */
+.header-nav .dropdown-menu {
+  right: 0;
+  left: auto;
+}
 .header-nav li {
   padding: 0;
 }
