@@ -1,0 +1,113 @@
+<!-- THIS CODE IS LOADED INTO THE GROUP HOMEPAGE AND REFERS TO CUSTOM CSS ALSO LOADED IN MANUALLY. -->
+
+
+<!-- Loading in Bootstrap seems to totally mess up styles, primarily font size. Not sure why...
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+
+<body>
+    
+    <!-- BEGIN: Page Header -->
+    {{public_header}}
+    <!-- END: Page Header -->
+    
+    <!-- BEGIN: content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="search-tabs">
+                    <h1 class="search-title">Search the Collections</h1>
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="discovery">Fleet Search</button>
+                        <button class="tab-btn" data-tab="catalog">Library Catalog</button>
+                        <button class="tab-btn" data-tab="website">Website</button>
+                    </div>
+                    <div class="tab-content active" id="discovery">
+                        <form action="https://0-research-ebsco-com.librarycat.risd.edu/c/ing2w3/search/results?" method="get" target="_blank">
+                            <input type="text" name="q" placeholder="Search databases, catalogs, and beyond">
+                            <button type="submit" aria-label="Search">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                </svg></button>
+                            </form>
+                            <div id="search-info" class="search-info">
+                                Fleet Search is a discovery tool: it enables searching across many resources at once. 
+                                It includes results from the library catalog and most of our databases, as well as materials you can request from other libraries.    </div>
+                            </div>
+                            <div class="tab-content" id="catalog">
+                                <form action="https://librarycat.risd.edu/search/X?" method="get" target="_blank">
+                                    <input type="text" name="SEARCH" placeholder="Search RISD + Athenaeum collections">
+                                    <button type="submit" aria-label="Search">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                        </svg></button>
+                                    </form>
+                                    <div id="search-info" class="search-info">
+                                        Fleet Library shares its library catalog with the Providence Athenaeum. Look for 
+                                        a "RISD" or "ATH" location to determine where each item can be found.
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="website">
+                                    <form action="https://risd.libguides.com/srch.php?" method="get" target="_blank">
+                                        <input type="text" name="q" placeholder="Search this website">
+                                        <button type="submit" aria-label="Search">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                            </svg></button>
+                                        </form>
+                                        <div id="search-info" class="search-info">
+                                            Search across this website's pages and research guides for information on using library resources and services.
+                                        </div>
+                                    </div>
+                </div>
+            <div class="col-md-6">
+<h2>Today's Hours</h2>
+                    <div id="api_hours_today_iid618_lid10497"></div>
+                         <script src="https://risd.libcal.com/api_hours_today.php?lid=10497&format=js&systemTime=0&context=object"> </script>
+                         <script src="https://risd.libcal.com/js/hours_today.js"></script>            </div>
+        </div>                
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://students.risd.edu/sites/default/files/styles/landscape_3_2_576x384/public/2023-07/2_students_working_at_computers_in_library.jpg?h=ea819b77&itok=wqKghbS0">
+                    </div> 
+            <div class="col-md-6">
+                <h2>This is a more dynamic hours widget with optional styles.</h2>
+                    <div id="s_lc_tdh_618_10497"></div> 
+                        <script>
+                        $(function(){ 
+                            var s_lc_tdh_618_10497 = new $.LibCalTodayHours( $("#s_lc_tdh_618_10497"), { iid: 618, lid: 10497 }); 
+                        });
+                </script>
+            </div>
+        </div>
+    </div>
+                            
+                            <!-- Please note: The following styles are optional, feel free to modify! //-->
+                            <style>
+                                .s-lc-w-today { border-spacing: 0; border-collapse: collapse; width: 100%; }.s-lc-w-today td, .s-lc-w-today th { padding: 8px 5px; }
+                                .s-lc-w-head { text-align: center; border-bottom: 1px solid #ddd; }
+                                .s-lc-w-loading { margin-top: 80px; text-align: center; }
+                                .s-lc-w-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+                                .s-lc-w-btn { line-height: 1.5; border-radius: 3px; display: inline-block; padding: 3px 6px; margin-bottom: 0; font-size: 12px; font-weight: 400; text-align: center; white-space: nowrap; vertical-align: middle; touch-action: manipulation; cursor: pointer; user-select: none; border: 1px solid #ccc; color: #333; background-color: #fff; }
+                                .s-lc-w-btn:active, .s-lc-w-btn:hover { color: #333; background-color: #d4d4d4; border-color: #8c8c8c; }
+                                .s-lc-w-previous { float: left;}
+                                .s-lc-w-next { float: right; }
+                                .s-lc-w-location td { font-weight: bold; }
+                                .s-lc-w-department .s-lc-w-name { padding-left: 20px; }
+                                .s-lc-w-times { border-bottom: 1px solid #ddd; }
+                                .s-lc-w-today-view-link { text-decoration: none; }
+                                .s-lc-w-today-view-all { padding: 8px 5px; }
+                            </style>
+                            <br>
+                            <h2>This is a placeholder homepage.</h2>
+                            <p>If you don't need to put text in a div for granular styling purposes, keep it out of one. Then the global styles will apply.</p>
+                            
+                            
+                            
+                            <!-- END: content -->
+                            
+                            <!-- BEGIN: Custom Footer -->
+                            {{public_footer}}
+                            <!-- END: Custom Footer -->
+                            
+                        </body>
