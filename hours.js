@@ -1,4 +1,6 @@
-//today is not highlighted, check the css file
+//add weekly hours with a table element
+//class="hours" id="circ" etc
+
 //Populate live hours
 function getData() {
     fetch('https://api3.libcal.com/api_hours_grid.php?iid=618&format=json&weeks=1&systemTime=0', {
