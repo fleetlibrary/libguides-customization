@@ -1,0 +1,355 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<script src="https://use.typekit.net/kqd4xew.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<style>
+.wf-loading {
+visibility: hidden;
+}
+
+body{
+    font-family: "adelle-sans", Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.ui-widget {
+     font-family: "adelle-sans", Helvetica, sans-serif;
+}
+.s-lg-guide-body {
+    font-family: "adelle-sans", Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+header {
+    background: #242424;
+    overflow: auto;
+}
+
+header h1, header h2, footer h4 {
+    font-family: "adelle", Georgia, serif;
+font-weight: 400;
+    text-align: left;
+}
+
+header h1 {
+    font-weight: 100;
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 0 .5em 0 20px;
+    float: left;
+    margin-top: 14px;
+}
+
+header h1 span{
+    text-transform: none;
+    letter-spacing: .5px;
+    font-size: .8em;
+}
+
+
+header h2 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    float: right;
+    color: #ffffff;
+    margin: 20px 20px 0 0;
+}
+
+/*----LINKS------*/
+
+a, .ui-widget-content a {
+    color: #00A1BA;
+}
+
+a:focus, a:hover{
+	color: #B9B9B9;
+	text-decoration: underline;
+}
+
+header a, footer a {
+	color: #D7A542;
+}
+
+
+
+/*---List of links--*/
+
+.s-lg-gtitle a.bold{
+    font-weight: 400;
+}
+
+.panel-heading a{
+    color: #333333;
+}
+
+#s-lg-guide-tabs-title-bar{
+   border-top: 1px solid #cccccc;
+}
+
+.s-lg-er-item-list li{
+    padding-top: 14px;
+}
+
+.container{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.s-lib-main, #s-lg-guide-main{
+    margin-top: 3em;
+}
+.s-lib-box .s-lib-box-title, .s-lib-public-side-header{
+    padding: 5px 0;
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: none;
+}
+
+#s-lg-guide-header-info h1, .s-lib-header h1{
+    font-family: "adelle", Georgia, serif;
+    font-size: 31px;
+}
+
+h1#s-lg-guide-name{
+    margin-top: 28px;
+}
+
+
+.s-lib-footer{
+    background-color: transparent;
+}
+
+#s-lib-bc{
+    margin-bottom: 4em;
+}
+
+#s-lg-tabs-container{
+    padding-top: 4em;
+}
+
+#s-lib-public-header-desc, #s-lg-guide-description{
+    font-family: "adelle", Georgia, serif;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+/*--------------TAB Navs--------------*/
+
+#s-lg-tabs-container .nav-tabs > li > a, #s-lg-tabs-container .nav-pills > li > a, #s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link, #s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link:hover{
+    background: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    font-weight: 400;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop, #s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop:hover{
+    padding: 8px 5px;
+}
+
+#s-lg-tabs-container .nav .dropdown-toggle .caret{
+    border-top-color: #333;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a:hover, #s-lg-tabs-container .nav-pills > li > a:hover, #s-lg-tabs-container .nav-tabs > .active > a:hover, #s-lg-tabs-container .nav-pills > .active > a:hover{
+    background: #efefef;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link:hover, #s-lg-tabs-container .nav-tabs > .active > a, #s-lg-tabs-container .nav-pills > .active > a{
+    background: #D7A542;
+    border-radius: 3px;
+    border-color: #D7A542;
+    color: #ffffff;
+    letter-spacing: .5px;
+}
+
+.s-lg-tab-top-link.active{
+    background: #D7A542;
+}
+
+#s-lg-tabs-container{
+    padding-top: 2em;
+}
+
+.alert-info{
+    background: none;
+    color: #3333;
+    border: none;
+}
+
+.s-lib-box-er-course-list{
+    border-width: 0 0 1px 0;
+}
+
+#s-lg-az-nav, #s-lg-er-nav, #s-lg-hp-nav, #s-lg-profile-nav, #s-lg-srch-nav {
+   background: none; 
+}
+#s-lg-er-nav-bottom, #s-lg-hp-nav-bottom, #s-lg-srch-nav-bottom {
+   background: none;
+   border-top: 1px solid #cccccc;
+}
+/*--------------SEARCH FIELD--------------*/
+
+input.form-control:focus {
+    border-color: #D7A542;
+    background: #ffffff;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(215,155,66,.6)
+}
+
+
+/*--------------BUTTONS--------------*/
+.btn-info, .label-info, .btn-primary {
+    background-color: #D7A542 !important;
+    border-color: transparent;
+    background-image: none;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.btn-info:hover, .label-info:hover, .btn-primary:hover{
+    background-color: #EFEFEF;
+    border-color: transparent;
+}
+
+.label-info{
+letter-spacing: 1px;
+}
+.s-lg-index-nav-btn {
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus{
+    border-color: #D7A542;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(215,155,66,.6)
+}
+
+
+/*--------------TABS------------*/
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+    background: #D7A542;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a, #s-lg-tabs-container .nav-pills > li > a, #s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link, #s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link:hover{
+    background: #ededed;
+    padding: 8px 15px;
+    border-radius: 3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop, #s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop:hover{
+    padding: 8px 5px;
+}
+
+#s-lg-tabs-container .nav .dropdown-toggle .caret{
+    border-top-color: #333;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a:hover, #s-lg-tabs-container .nav-pills > li > a:hover, #s-lg-tabs-container .nav-tabs > .active > a:hover, #s-lg-tabs-container .nav-pills > .active > a:hover{
+    background: transparent;
+    color: #D7A542;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > a, #s-lg-tabs-container .nav-pills > .active > a{
+    background: #D7A542;
+}
+
+#s-lg-tabs-container{
+    margin-top: 2em;
+}
+/*--------------FOOTER AREA--------------*/
+
+footer {
+    background: #292929 url("../images/risd-bg.png") bottom right no-repeat;
+    background-size: contain;
+    color: #fff;
+    overflow: hidden;
+    font-family: "adelle-sans", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+footer h4 {
+    font-size: 1.1em;
+    font-weight: 400;
+    letter-spacing: .5px;
+    margin-bottom: .5em;
+}
+
+footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+footer li {
+    font-size: .9em;
+    margin-bottom: 5px;
+}
+
+.socialmedia {
+    text-align: center;
+    padding: 1.5em 0;
+    border-bottom: 1px solid #666;
+}
+
+.socialmedia i{
+    padding: .5em;
+    border: 1px solid #D7A542;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    margin: 0 .5em;
+}
+
+
+.footerlinks {
+    padding: 2em 0 3em 0;
+}
+
+
+#twitter{
+    padding: 15px;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 800px){
+    header h2{
+            display: none;
+        }
+    header h1{
+        font-size: 18px;
+    }
+     .container {
+        padding: 0 3% 0 3%;
+     }
+
+     #s-lg-guide-header-search{
+        clear: both;
+        margin: -30px 0;
+     }
+
+     #s-lg-guide-search-box{
+        margin: 0 0 5.5em 0;
+        width: 100%;
+     }
+
+    .s-lib-public-side-header{
+        margin-top: 2em;
+    }
+}
+
+#s-lg-public-skiplink{
+      display:none;
+}
+</style>

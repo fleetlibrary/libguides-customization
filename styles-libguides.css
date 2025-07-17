@@ -76,7 +76,8 @@ a:visited:hover {
   display: flex;
   align-items: center;
   background-color: #fff;
-  width: 100%;
+    max-width: 100% !important;
+  /*width: 100%;*/
 }
 
 /* Style the image/logo */
@@ -276,32 +277,68 @@ a:visited:hover {
   padding-bottom: 10px;
 }
 
-/*--------------FOOTER AREA--------------*/
+/*-- buttons--*/
 
-html, body {
-  overflow-x: hidden;
+.nav-pills > li.active > button,
+.nav-pills > li.active > button:focus,
+.nav-pills > li.active > button:hover, 
+.btn-info {
+  color: #fff;
+  background-color: #2454FF;
 }
 
-.footer {
+.nav .s-lg-index-nav-btn > button {
+  color: #2454FF;
+}
+
+
+.risd-btn {
+  background:#222222;
+  color: #fff;
+  border-width: 0;
+  border-radius: 4px;
+  padding: 5px 10px 5px 10px;
+}
+
+.risd-btn:hover {
+  background: #2454FF;
+}
+
+
+/*--------------FOOTER AREA--------------*/
+
+.footer-risd {
   background: #111;
+  background-size: contain;
+  color: #fff;
+  overflow: hidden;
   padding: 30px;
-  margin-top: 60px;
   text-align: left;
   max-width: 100% !important;
-  position: absolute;
   left: 0;
   width: 100%;
   height: 100%;
   font-family: 'RISD Sans Variable', Arial, sans-serif;
 }
 
-.footer-login {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #F5F5F3;
-  text-align:center;
+.footer-risd a {
+  color: #fff;
 }
-.footer-login a {
-color: #2454FF;
+
+.footer a:hover {
+  text-decoration: underline solid #fff;
 }
+
+
+footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+.footerlinks {
+    padding: 2em 0 3em 0;
+}
+
+
 </style>
