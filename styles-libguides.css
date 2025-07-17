@@ -276,6 +276,34 @@ a:visited:hover {
   padding-bottom: 10px;
 }
 
+/*-- buttons--*/
+
+.nav-pills > li.active > button,
+.nav-pills > li.active > button:focus,
+.nav-pills > li.active > button:hover, 
+.btn-info {
+  color: #fff;
+  background-color: #2454FF;
+}
+
+.nav .s-lg-index-nav-btn > button {
+  color: #2454FF;
+}
+
+
+.risd-btn {
+  background:#222222;
+  color: #fff;
+  border-width: 0;
+  border-radius: 4px;
+  padding: 5px 10px 5px 10px;
+}
+
+.risd-btn:hover {
+  background: #2454FF;
+}
+
+
 /*--------------FOOTER AREA--------------*/
 
 html, body {
