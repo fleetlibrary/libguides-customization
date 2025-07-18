@@ -1,14 +1,6 @@
-/*---Styles for application in LibGuides. May need to be slightly different from website styles--*/
-
-/*-------DO NOT REMOVE <script> and <style> TAGS--------------------*/
-/*-------THEY ARE REQUIRED within the libguides environment---------*/
-/*-------EVEN THOUGH they make this file ugly and dysfunctional!---------*/
-
-/* CURRENT ISSUES: */
-/* Box borders and footer not showing up */
-/* Need more space under breadcrumbs */
-
 <style>
+/*---EMILY CHECK THIS AGAINST LOCAL COPY PLEASE!!!!---*/
+/*-------DO NOT REMOVE <script> and <style> TAGS--------------------*/
 
 /* RISD Font Inserts and Global Font Styles */
 
@@ -31,6 +23,7 @@
   font-family: 'RISD Sans Bold';
   src:url('https://d2jv02qf7xgjwx.cloudfront.net/sites/815/include/RISD_Sans-Bold.otf')
 }
+
 body, ul, p {
   font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
@@ -49,8 +42,7 @@ strong {
 a {
   font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
   color: #2454FF;
-  weight: 400;
-  text-decoration: underline solid #000 auto;
+  text-decoration: underline solid #E0E0DD auto;
 }
 
 a:hover {
@@ -63,26 +55,27 @@ a:focus {
 
 a:visited {
   color: #2454FF;
-  text-decoration: underline solid #000 auto;
+  text-decoration: underline solid #E0E0DD auto;
 }
 
 a:visited:hover {
   color: #BE53F7;
 }
 
-/*---------------------HEADER-----------------------*/
 /* Style the header with background and some padding */
 .header {
   display: flex;
   align-items: center;
   background-color: #fff;
-    max-width: 100% !important;
   /*width: 100%;*/
+max-width: 100% !important;
+border-bottom: #222222 solid 1px;
 }
 
 /* Style the image/logo */
 .header img {
   height: 50px;
+max-height: 100px;
   width: auto;
   display: block;
   padding-left: 10px;
@@ -119,6 +112,7 @@ a:visited:hover {
   right: 0;
   left: auto;
 }
+
 .header-nav li {
   padding: 0;
 }
@@ -253,14 +247,33 @@ a:visited:hover {
 /*alter tab size and text, normally inherited from body*/
 #s-lg-tabs-container .nav-tabs > li > a, #s-lg-tabs-container .nav-pills > li > a, #s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link, #s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link:hover {
   margin-top: 5px;
-  padding: 5px 10px;
+margin-right: 5px;
+  padding: 6px 10px;
   font-size: 1em;
   letter-spacing: .8px;
   text-decoration: none;
 }
 
-/*Remove underlining from sub-tabs in menu*/
+#s-lg-tabs-container .nav .dropdown-toggle .caret {
+  border-top-color:#000;
+}
+
+#s-lg-tabs-container .nav-tabs .dropdown-toggle .caret {
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+/*Remove underlining from sub-tabs in menu and breadcrumbs*/
+
 .list-group-item a {
+    text-decoration: none;
+}
+
+#s-lib-bc {
+padding-top: 10px;
+}
+
+.breadcrumb a {
     text-decoration: none;
 }
 
@@ -270,18 +283,28 @@ a:visited:hover {
   font-family: 'RISD Complete', Georgia, 'Times New Roman', Times, serif;
   font-weight: 500;
   font-size: 2.5em;
-  color: #2454FF;
+  color: #000;
+  padding: 20px 0px 10px;
 }
 
 #s-lg-guide-header-info {
   padding-bottom: 10px;
 }
 
-/*-- buttons--*/
+
+.s-lib-profile-email .label-info {
+  background-color: #2454FF;
+  color: #fff;
+  border-radius: 4px;
+text-decoration: none;
+padding: 10px 10px;
+}
+
+/*--buttons--*/
 
 .nav-pills > li.active > button,
 .nav-pills > li.active > button:focus,
-.nav-pills > li.active > button:hover, 
+.nav-pills > li.active > button:hover,
 .btn-info {
   color: #fff;
   background-color: #2454FF;
@@ -291,6 +314,9 @@ a:visited:hover {
   color: #2454FF;
 }
 
+.btn-info a {
+  text-decoration: none;
+}
 
 .risd-btn {
   background:#222222;
@@ -303,7 +329,6 @@ a:visited:hover {
 .risd-btn:hover {
   background: #2454FF;
 }
-
 
 /*--------------FOOTER AREA--------------*/
 
@@ -340,5 +365,13 @@ footer ul {
     padding: 2em 0 3em 0;
 }
 
+/*-------------HOURS WIDGET----------*/
+tr.today{
+	color: #FF6C2F;
+}
+
+td {
+	width: 70%;
+}
 
 </style>
