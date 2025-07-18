@@ -1,5 +1,5 @@
 <style>
-/*---EMILY CHECK THIS AGAINST LOCAL COPY PLEASE!!!!---*/
+/*---EMILY CHECK THIS AGAINST LOCAL COPY PLEASE---*/
 /*-------DO NOT REMOVE <script> and <style> TAGS--------------------*/
 
 /* RISD Font Inserts and Global Font Styles */
@@ -101,14 +101,14 @@ max-height: 100px;
 
 /* Remove any floats or alignment from menu items */
 .header-nav .menu-li,
-.header-nav .dropdown {
+.header-nav .header-more {
   float: none !important;
   margin: 0 !important;
   padding: 0 10px !important;
 }
 
-/* Optional: keep dropdown menu aligned right */
-.header-nav .dropdown-menu {
+/* Optional: keep header-more menu aligned right */
+.header-nav .header-menu {
   right: 0;
   left: auto;
 }
@@ -138,7 +138,7 @@ max-height: 100px;
 /* -----------DROPDOWN MENU----------- */
 
 /* Dropdown menu hidden by default */
-.dropdown-menu {
+.header-menu {
   display: none;
   position: absolute;
   right: 0;
@@ -151,7 +151,7 @@ max-height: 100px;
   text-align: right;
 }
 
-.dropdown-menu li a {
+.header-menu li a {
   display: block;
   padding: 10px 20px;
   color: #000;
@@ -160,14 +160,14 @@ max-height: 100px;
   text-align: right; /* Optional: reinforces left alignment */
 }
 
-.dropdown-menu li a:hover {
+.header-menu li a:hover {
   background: #2454FF;
   color: #fff;
 }
 
-/* style the dropdown MENU button */
+/* style the dropdown MORE button */
 
-.nav-btn {
+.more-btn {
   float: none; /* remove float */
   padding: 10px 10px;
   color: #000000;
@@ -178,7 +178,7 @@ max-height: 100px;
   line-height: 25px;
 }
 
-.nav-btn:hover {
+.more-btn:hover {
   color: #fff;
   background: #2454FF;
   cursor: pointer;
@@ -186,7 +186,7 @@ max-height: 100px;
 
 
 /* Show dropdown on hover */
-.header-nav .dropdown-menu {
+.header-nav .header-menu {
   display: none;
   position: absolute;
   background: white;
@@ -197,8 +197,8 @@ max-height: 100px;
   z-index: 1000;
 }
 
-.header-nav .dropdown:hover .dropdown-menu,
-.header-nav .dropdown:focus-within .dropdown-menu {
+.header-nav .header-more:hover .header-menu,
+.header-nav .header-more:focus-within .header-menu {
   display: block;
 }
 
