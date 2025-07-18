@@ -1,33 +1,37 @@
 <style>
-/*---EMILY CHECK THIS AGAINST LOCAL COPY PLEASE---*/
 /*-------DO NOT REMOVE <script> and <style> TAGS--------------------*/
 
 /* RISD Font Inserts and Global Font Styles */
 
 @font-face {
   font-family: 'RISD Complete';
-  src:url('https://d2jv02qf7xgjwx.cloudfront.net/sites/815/include/RISD_Serif_Complete-Light.otf')
+  src: url('https://d2jv02qf7xgjwx.cloudfront.net/sites/815/include/RISD_Serif_Complete-Light.otf')
 }
 
 @font-face {
   font-family: 'RISD Sans';
-  src:url('https://d2jv02qf7xgjwx.cloudfront.net/sites/815/include/RISD_Sans-Regular.otf')
+  src: url('https://d2jv02qf7xgjwx.cloudfront.net/sites/815/include/RISD_Sans-Regular.otf')
 }
 
 @font-face {
   font-family: 'RISD Sans Italic';
-  src:url('https://d2jv02qf7xgjwx.cloudfront.net/sites/815/include/RISD_Sans-Regular_Italic.otf')
+  src: url('https://d2jv02qf7xgjwx.cloudfront.net/sites/815/include/RISD_Sans-Regular_Italic.otf')
 }
 
 @font-face {
   font-family: 'RISD Sans Bold';
-  src:url('https://d2jv02qf7xgjwx.cloudfront.net/sites/815/include/RISD_Sans-Bold.otf')
+  src: url('https://d2jv02qf7xgjwx.cloudfront.net/sites/815/include/RISD_Sans-Bold.otf')
 }
 
 body, ul, p {
   font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   color: #222222;
+}
+
+body {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -62,26 +66,24 @@ a:visited:hover {
   color: #BE53F7;
 }
 
-/* Style the header with background and some padding */
+/* ---------PAGE HEADER--------- */
+
 .header {
   display: flex;
   align-items: center;
   background-color: #fff;
-  /*width: 100%;*/
-max-width: 100% !important;
-border-bottom: #222222 solid 1px;
+  width: 100%;
+  border-bottom: #222222 solid 1px;
 }
 
-/* Style the image/logo */
 .header img {
   height: 50px;
-max-height: 100px;
+  max-height: 100px;
   width: auto;
   display: block;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
-/* Style the navigation links container */
 .header-nav {
   display: flex !important;
   align-items: center;
@@ -93,13 +95,11 @@ max-height: 100px;
   gap: 1.5rem;
 }
 
-/* Logo stays left, menu floats right */
 .header-nav .logo-li {
   margin-right: auto !important;
   padding-left: 0 !important;
 }
 
-/* Remove any floats or alignment from menu items */
 .header-nav .menu-li,
 .header-nav .header-more {
   float: none !important;
@@ -107,7 +107,6 @@ max-height: 100px;
   padding: 0 10px !important;
 }
 
-/* Optional: keep header-more menu aligned right */
 .header-nav .header-menu {
   right: 0;
   left: auto;
@@ -124,12 +123,11 @@ max-height: 100px;
   text-decoration: none;
   text-decoration-color: #2454FF;
   font-size: 16px;
-  font-family: 'RISD Sans Variable', Arial, Helvetica, sans-serif; 
+  font-family: 'RISD Sans Variable', Arial, Helvetica, sans-serif;
   font-style: regular;
   line-height: 25px;
 }
 
-/* Change the menu on mouse-over */
 .header-nav .menu-li a:hover {
   background: #2454FF;
   color: #fff;
@@ -137,13 +135,12 @@ max-height: 100px;
 
 /* -----------DROPDOWN MENU----------- */
 
-/* Dropdown menu hidden by default */
 .header-menu {
   display: none;
   position: absolute;
   right: 0;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -157,7 +154,7 @@ max-height: 100px;
   color: #000;
   text-decoration: none;
   font-family: 'RISD Sans Variable', Arial, Helvetica, sans-serif;
-  text-align: right; /* Optional: reinforces left alignment */
+  text-align: right;
 }
 
 .header-menu li a:hover {
@@ -165,15 +162,14 @@ max-height: 100px;
   color: #fff;
 }
 
-/* style the dropdown MORE button */
-
 .more-btn {
-  float: none; /* remove float */
+  float: none;
+  /* remove float */
   padding: 10px 10px;
   color: #000000;
   text-align: center;
   font-size: 16px;
-  font-family: 'RISD Sans', Arial, Helvetica, sans-serif; 
+  font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
   font-weight: 100;
   line-height: 25px;
 }
@@ -184,8 +180,6 @@ max-height: 100px;
   cursor: pointer;
 }
 
-
-/* Show dropdown on hover */
 .header-nav .header-menu {
   display: none;
   position: absolute;
@@ -202,25 +196,28 @@ max-height: 100px;
   display: block;
 }
 
-/* Responsive: stack and center header content on small screens */
+/* Responsive header */
 @media (max-width: 900px) {
   .header-nav {
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
   }
+
   .header-nav .logo-li {
     order: -1;
-    margin-bottom: 10px; /* adjust as needed */
-    padding: 0;          /* remove padding */
+    margin-bottom: 10px;
+    padding: 0;
   }
+
   .header-nav .logo-li img {
     display: block;
-    margin: 0 auto;      /* center logo if desired */
+    margin: 0 auto;
     padding: 0;
-    max-width: 80vw;     /* responsive logo */
+    max-width: 80vw;
     height: auto;
   }
+
   .header-nav li {
     margin: 0;
     padding: 0;
@@ -229,8 +226,9 @@ max-height: 100px;
 
 /*--------ALTERATIONS TO LIBGUIDES DEFAULTS---------*/
 
-/*alter box header text */
-.s-lib-box .s-lib-box-title, .s-lib-public-side-header{
+/* alter BOX title text */
+.s-lib-box .s-lib-box-title,
+.s-lib-public-side-header {
   font-size: 1em;
   letter-spacing: 1.6px;
   font-family: 'RISD Sans Variable', Arial, Helvetica, sans-serif;
@@ -239,23 +237,31 @@ max-height: 100px;
 }
 
 /*ensure floating boxes have padding*/
-.s-lib-floating-box{
+.s-lib-floating-box {
   padding: 10px;
 }
 
 
-/*alter tab size and text, normally inherited from body*/
-#s-lg-tabs-container .nav-tabs > li > a, #s-lg-tabs-container .nav-pills > li > a, #s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link, #s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link:hover {
+/*alter tab size and text*/
+#s-lg-tabs-container .nav-tabs>li>a,
+#s-lg-tabs-container .nav-pills>li>a,
+#s-lg-tabs-container .nav-tabs>li>a.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop,
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop:hover,
+#s-lg-tabs-container .nav-tabs>li>a.s-lg-tab-top-link:hover {
   margin-top: 5px;
-margin-right: 5px;
-  padding: 6px 10px;
+  padding: 6px 8px;
   font-size: 1em;
   letter-spacing: .8px;
   text-decoration: none;
 }
 
+#s-lg-guide-tabs .nav-tabs>li {
+margin-right: 3px;
+}
+
 #s-lg-tabs-container .nav .dropdown-toggle .caret {
-  border-top-color:#000;
+  border-top-color: #000;
 }
 
 #s-lg-tabs-container .nav-tabs .dropdown-toggle .caret {
@@ -263,23 +269,28 @@ margin-right: 5px;
   margin-top: 2px;
 }
 
-/*Remove underlining from sub-tabs in menu and breadcrumbs*/
+/*add more space under top-nav tabs*/
+.s-lib-main {
+padding-top: 25px;
+}
 
+/*Remove underlining from links in menu and breadcrumbs*/
 .list-group-item a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #s-lib-bc {
-padding-top: 10px;
+  padding-top: 10px;
 }
 
 .breadcrumb a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /*alter guide title*/
 
-#s-lg-guide-header-info h1, .s-lib-header h1 {
+#s-lg-guide-header-info h1,
+.s-lib-header h1 {
   font-family: 'RISD Complete', Georgia, 'Times New Roman', Times, serif;
   font-weight: 500;
   font-size: 2.5em;
@@ -291,42 +302,60 @@ padding-top: 10px;
   padding-bottom: 10px;
 }
 
+/*--BUTTONS--*/
 
-.s-lib-profile-email .label-info {
-  background-color: #2454FF;
+.s-lib-profile-email a.label-info {
+  background-color: #222222;
   color: #fff;
   border-radius: 4px;
-text-decoration: none;
-padding: 10px 10px;
+  text-decoration: none;
+  padding: 10px 10px;
 }
 
-/*--buttons--*/
-
-.nav-pills > li.active > button,
-.nav-pills > li.active > button:focus,
-.nav-pills > li.active > button:hover,
-.btn-info {
-  color: #fff;
+.s-lib-profile-email a.label-info:hover {
   background-color: #2454FF;
-}
-
-.nav .s-lg-index-nav-btn > button {
-  color: #2454FF;
-}
-
-.btn-info a {
   text-decoration: none;
 }
 
-.risd-btn {
-  background:#222222;
+.nav-pills>li.active>button,
+.nav-pills>li.active>button:focus,
+.nav-pills>li.active>button:hover,
+.btn-info {
+  color: #fff;
+  background-color: #222222;
+  text-decoration: none;
+}
+
+.nav .s-lg-index-nav-btn>button {
+  color: #222222;
+}
+
+/*test*/
+.btn-info a {
+  text-decoration: none;
+}
+/*test*/
+button {
+  background: #222222;
   color: #fff;
   border-width: 0;
   border-radius: 4px;
   padding: 5px 10px 5px 10px;
 }
 
-.risd-btn:hover {
+button:hover {
+  background: #2454FF;
+}
+
+button.risd-btn {
+  background: #222222;
+  color: #fff;
+  border-width: 0;
+  border-radius: 4px;
+  padding: 5px 10px 5px 10px;
+}
+
+button.risd-btn:hover {
   background: #2454FF;
 }
 
@@ -356,22 +385,22 @@ padding: 10px 10px;
 
 
 footer ul {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 
 .footerlinks {
-    padding: 2em 0 3em 0;
+  padding: 2em 0 3em 0;
 }
 
 /*-------------HOURS WIDGET----------*/
-tr.today{
-	color: #FF6C2F;
+tr.today {
+  color: #FF6C2F;
 }
 
 td {
-	width: 70%;
+  width: 70%;
 }
 
 </style>
