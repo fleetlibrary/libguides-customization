@@ -375,7 +375,7 @@ button.risd-btn:hover {
   font-family: 'RISD Sans Variable', Arial, sans-serif;
 }
 
-.footer-risd a {
+.footer-risd a, .footer-risd p {
   color: #fff;
 }
 
