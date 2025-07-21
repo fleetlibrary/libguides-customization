@@ -1,11 +1,4 @@
-<style>
-/*-------DO NOT REMOVE <script> and <style> TAGS--------------------*/
-
-/*These are additional scripts and styles for "Website" group in LibGuides*/
-
-/*-------------HOMEPAGE SEARCH BOX---------*/
-/*-------------FYI: font sizing is crazy in here, please mess with it if you know another way--------*/
-
+/*------FLEET SEARCH BOX WIDGET------*/
 
 .search-title {
   font-family: 'RISD Complete', Georgia, 'Times New Roman', Times, serif;
@@ -83,17 +76,3 @@ font-size: 5rem;
   border-radius: 4px;
   min-height: 2.2em;
 }
-
-</style>
-
-<script>
-  // Tab switching for homepage search box
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
-      this.classList.add('active');
-      document.getElementById(this.dataset.tab).classList.add('active');
-    });
-  });
-</script>
