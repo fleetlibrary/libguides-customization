@@ -303,6 +303,11 @@ padding-top: 25px;
   padding-bottom: 10px;
 }
 
+/* Make E-Reserves titles bold */
+li.s-lg-er-item > a {
+    font-family: 'RISD Sans Bold', Arial, Helvetica, sans-serif;
+}
+
 /*--BUTTONS--*/
 
 .s-lib-profile-email a.label-info {

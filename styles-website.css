@@ -1,3 +1,16 @@
+/* hide breadcrumbs, search bar and system footer */ 
+#s-lib-bc {
+  display: none;
+}
+
+#s-lib-footer-public {
+  display: none;
+}
+
+#s-lg-guide-header-search {
+  display: none;
+}
+
 /*------FLEET SEARCH BOX WIDGET------*/
 
 .search-title {
