@@ -1,6 +1,20 @@
 /*-----SYSTEM-WIDE STYLES FOR LIBGUIDES-----*/
-/*-ec 7.21.25-*/
+/*-ec 8.21.25-*/
 
+:root{
+    --risd-blue: #2454FF;
+    --dark-blue: #0011d1;
+    --white: #fff;
+    --off-white: #F5F5F3;
+    --light-gray: #E0E0DD;
+    --mid-gray: #B6B6B6;
+    --black: #000000;
+    --purple: #BE53F7;
+    --orange: #FF6C2F;
+    --green: #00A95C;
+    --gold: #B97000;
+    --pink: #E44C9A;
+}
 
 /* RISD Font Inserts and Global Font Styles */
 
@@ -46,25 +60,25 @@ strong {
 
 a {
   font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
-  color: #2454FF;
+  color: var(--risd-blue);
   text-decoration: underline solid #E0E0DD auto;
 }
 
 a:hover {
-  color: #BE53F7;
+  color: var(--purple);
 }
 
 a:focus {
-  color: #BE53F7;
+  color: var(--purple);
 }
 
 a:visited {
-  color: #2454FF;
+  color: var(--risd-blue);
   text-decoration: underline solid #E0E0DD auto;
 }
 
 a:visited:hover {
-  color: #BE53F7;
+  color: var(--purple);
 }
 
 /* ---------PAGE HEADER--------- */
@@ -122,7 +136,7 @@ a:visited:hover {
   padding: 10px 10px;
   color: #000000;
   text-decoration: none;
-  text-decoration-color: #2454FF;
+  text-decoration-color: var(--risd-blue);
   font-size: 16px;
   font-family: 'RISD Sans Variable', Arial, Helvetica, sans-serif;
   font-style: regular;
@@ -130,7 +144,7 @@ a:visited:hover {
 }
 
 .header-nav .menu-li a:hover {
-  background: #2454FF;
+  background: var(--risd-blue);
   color: #fff;
 }
 
@@ -159,7 +173,7 @@ a:visited:hover {
 }
 
 .header-menu li a:hover {
-  background: #2454FF;
+  background: var(--risd-blue);
   color: #fff;
 }
 
@@ -177,7 +191,7 @@ a:visited:hover {
 
 .more-btn:hover {
   color: #fff;
-  background: #2454FF;
+  background: var(--risd-blue);
   cursor: pointer;
 }
 
@@ -319,7 +333,7 @@ li.s-lg-er-item > a {
 }
 
 .s-lib-profile-email a.label-info:hover {
-  background-color: #2454FF;
+  background-color: var(--risd-blue);
   text-decoration: none;
 }
 
@@ -350,7 +364,7 @@ button {
 }
 
 button:hover {
-  background: #2454FF;
+  background: var(--risd-blue);
 }
 
 button.risd-btn {
@@ -362,7 +376,7 @@ button.risd-btn {
 }
 
 button.risd-btn:hover {
-  background: #2454FF;
+  background: var(--risd-blue);
 }
 
 /*--------------FOOTER AREA--------------*/
@@ -402,9 +416,9 @@ footer ul {
 
 /*-------------HOURS WIDGET----------*/
 tr.today {
-  color: #FF6C2F;
+  color: var(--orange);
 }
 
-td {
+td.s-lc-w-name {
   width: 70%;
 }
