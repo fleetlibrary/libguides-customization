@@ -40,7 +40,7 @@
 
 @font-face {
     font-family: "RISD Serif Complete";
-    font-style: normal;
+    font-style: bold;
     font-weight: 400;
     font-display: fallback;
     src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Complete_Variable.woff2') format("woff2");
