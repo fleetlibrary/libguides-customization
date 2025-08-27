@@ -88,7 +88,7 @@ a:visited:hover {
   align-items: center;
   background-color: #fff;
   width: 100%;
-  border-bottom: #222222 solid 1px;
+  border-bottom: #2454FF solid 3px;
 }
 
 .header img {
@@ -350,33 +350,24 @@ li.s-lg-er-item > a {
   color: #222222;
 }
 
-/*test*/
-.btn-info a {
-  text-decoration: none;
-}
-/*test*/
-button {
-  background: #222222;
-  color: #fff;
-  border-width: 0;
-  border-radius: 4px;
-  padding: 5px 10px 5px 10px;
-}
-
-button:hover {
-  background: var(--risd-blue);
+.risd-btn .btn-info {
+    justify-content: space-between;
+    padding: 8px 24px;;
+    border: 2px solid #2545FF;
+    border-radius: 0;
+    background-color: transparent;
+    color: #2545FF;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition-property: color, background-color;
+    transition-duration: .25s;
+    transition-timing-function: ease-out;
 }
 
-button.risd-btn {
-  background: #222222;
-  color: #fff;
-  border-width: 0;
-  border-radius: 4px;
-  padding: 5px 10px 5px 10px;
-}
-
-button.risd-btn:hover {
-  background: var(--risd-blue);
+.risd-btn:hover .btn-info:hover {
+    background-color: #2545FF;
+    border-color: #2545FF;
+    color: white;
 }
 
 /*--------------FOOTER AREA--------------*/
