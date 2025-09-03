@@ -1,0 +1,104 @@
+:root {
+    --color-gray: #F5F5F3;
+    --color-blue: #2454FF;
+    --color-white: #fff;
+    --color-black: #000;
+}
+
+@font-face {
+    font-family: "RISD Sans";
+    font-style: normal;
+    font-weight: 100;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Sans_Variable.woff2') format("woff2-variations");
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Sans-Regular.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Sans";
+    font-weight: bold;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Sans-Bold.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Sans";
+    font-style: italic;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Sans-Regular_Italic.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif Complete";
+    font-style: normal;
+    font-weight: 100;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Complete_Variable.woff2') format("woff2-variations");
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Complete-Light.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif Complete";
+    font-style: normal;
+    font-weight: 400;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Complete_Variable.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif Complete";
+    font-style: italic;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Complete-Light_Italic.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif SemiComplete";
+    font-style: normal;
+    font-weight: 100;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Variable.woff2') format("woff2");
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Light.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif SemiComplete";
+    font-style: normal;
+    font-weight: 300;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Variable.woff2') format("woff2");
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Light.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif Semicomplete";
+    font-style: normal;
+    font-weight: 400;
+    font-display: fallback;
+    src: url(http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Semibold.woff2) format("woff2");
+    src: url(http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Variable.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif Semicomplete";
+    font-style: normal;
+    font-weight: bold;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Bold.woff2') format("woff2");
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Variable.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif Semicomplete";
+    font-style: italic;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Italic_Variable.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif Incomplete";
+    font-style: normal;
+    font-weight: 100;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Incomplete-Light.woff2') format("woff2");
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Incomplete_Variable.woff2') format("woff2");
+}

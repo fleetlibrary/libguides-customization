@@ -1,0 +1,652 @@
+<style>
+/**************BEGIN mc's stylesheet**********/
+
+:root {
+    --color-gray: #F5F5F3;
+    --color-blue: #2454FF;
+    --color-white: #fff;
+    --color-black: #000;
+}
+
+@font-face {
+    font-family: "RISD Sans";
+    font-style: normal;
+    font-weight: 100;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Sans_Variable.woff2') format("woff2-variations");
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Sans-Regular.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Sans";
+    font-weight: bold;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Sans-Bold.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Sans";
+    font-style: italic;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Sans-Regular_Italic.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif Complete";
+    font-style: normal;
+    font-weight: 100;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Complete_Variable.woff2') format("woff2-variations");
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Complete-Light.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif Complete";
+    font-style: normal;
+    font-weight: 400;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Complete_Variable.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif Complete";
+    font-style: italic;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Complete-Light_Italic.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif SemiComplete";
+    font-style: normal;
+    font-weight: 100;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Variable.woff2') format("woff2");
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Light.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif SemiComplete";
+    font-style: normal;
+    font-weight: 300;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Variable.woff2') format("woff2");
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Light.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif Semicomplete";
+    font-style: normal;
+    font-weight: 400;
+    font-display: fallback;
+    src: url(http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Semibold.woff2) format("woff2");
+    src: url(http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Variable.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif Semicomplete";
+    font-style: normal;
+    font-weight: bold;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Bold.woff2') format("woff2");
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Variable.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif Semicomplete";
+    font-style: italic;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Italic_Variable.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "RISD Serif Incomplete";
+    font-style: normal;
+    font-weight: 100;
+    font-display: fallback;
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Incomplete-Light.woff2') format("woff2");
+    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Incomplete_Variable.woff2') format("woff2");
+}
+
+body {
+    font-family: 'RISD Sans', Arial, Helvetica, sans-serif !important;
+    font-size: 16px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.header-nav a {
+    font-family: 'RISD Sans';
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+.container {
+    margin: 80px auto;
+}
+
+.libguides--gray-box {
+    background-color: var(--color-gray);
+    padding: 24px 40px;
+}
+
+.libguides--blue-box {
+    background-color: var(--color-blue);
+    padding: 80px 0;
+}
+
+.libguides--blue-box .container {
+    margin: 0 auto;
+}
+
+.layout-2x2 {
+    display: flex;
+    flex: 1 1 calc(100% - 20px);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.layout-2x2 .libguides--gray-box {
+    width: calc(50% - 10px);
+}
+
+/* Typography */
+h1.search-title {
+    color: var(--color-white);
+    font-size: 80px;
+    font-family: 'RISD Serif SemiComplete', 'Georgia', serif;
+    font-weight: 100;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: 'RISD Serif Complete', serif !important;
+    font-size: 36px !important;
+    font-weight: 100 !important;
+    margin-top: 0 !important;
+    margin-bottom: 40px !important;
+}
+
+h3 {
+    font-family: 'RISD Serif Complete', serif !important;
+    font-size: 24px;
+    font-weight: 100 !important;
+    text-transform: uppercase;
+}
+
+.row a {
+    color: var(--color-black);
+    font-size: 16px;
+}
+
+.row a:hover {
+    color: var(--color-blue);
+    text-decoration: none;
+}
+
+.layout-2x2 a {
+    display: inline-block;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--color-blue);
+    margin-bottom: 30px;
+}
+
+button.s-lc-w-btn, .s-lc-w-today-view-all a {
+    justify-content: space-between;
+    padding: 8px 24px;;
+    border: 2px solid var(--color-blue);
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--color-blue);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition-property: color, background-color;
+    transition-duration: .25s;
+    transition-timing-function: ease-out;
+}
+
+button.s-lc-w-btn:hover, .s-lc-w-today-view-all a:hover {
+    background-color: var(--color-blue);
+    border-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+/* Hours */
+.s-lc-w-today, .s-lc-w-name, .s-lc-w-department .s-lc-w-name, .s-lc-w-time {
+    padding: 32px 0 16px 0 !important;
+    padding-left: 0 !important;
+}
+
+td.s-lc-w-name {
+    width: auto;
+}
+
+th.s-lc-w-head {
+    position: relative;
+}
+
+.s-lc-w-head > span {
+    font-size: 16px;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    font-weight: normal;
+}
+
+.s-lc-w-head > span.s-lc-w-head-pre {
+    display: none;
+}
+
+tr.s-lc-w-times {
+    border-bottom: 2px solid var(--color-black);
+    display: block;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+tr.s-lc-w-times.s-lc-w-location {
+    margin-bottom: 0 !important;
+}
+
+.s-lc-w-time {
+    text-align: right;
+}
+
+.s-lc-w-today-view-all {
+    margin-top: 32px;
+}
+
+.s-lc-w-next {
+    float: none;
+    position: absolute;
+    right: 0;
+}
+
+.s-lc-w-previous {
+    float: none;
+    position: absolute;
+    left: 0;
+}
+
+/* Search */
+.search-tabs {
+    background-color: var(--color-blue);
+    margin: 0;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background-color: var(--color-blue);
+    border: 2px solid var(--color-white);
+    border-radius: 0;
+    color: var(--color-white);
+}
+
+.tab-btn.active {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-white);
+    color: var(--color-blue);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab-content input[type="text"] {
+  flex: 1;
+}
+
+.tab-content button[type="submit"] {
+  cursor: pointer;
+}
+
+.search-info {
+    color: var(--color-white);
+    background-color: transparent;
+}
+
+.search-info {
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+    min-height: 2.2em;
+    color: var(--color-white);
+    background-color: transparent;
+}
+
+.search-tabs form {
+    background-color: var(--color-white);
+}
+
+.search-tabs .tab-content form input[type="text"] {
+    border: 0;
+    font-family: 'RISD Serif Complete', serif;
+    color: var(--color-blue);
+    font-size: 24px;
+    font-weight: 100;
+    padding: 10px 20px;
+}
+
+.tab-content button[type="submit"] {
+    padding: .5em 1em 0em 1em;
+    background: var(--color-blue);
+    color: var(--color-white);
+    border: none;
+    margin: 4px;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+/* Featured Header Content */
+.featured-image {
+    text-align: center;
+}
+
+.featured-image img {
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.featured-link a {
+    color: var(--color-white);
+    border-bottom: 2px solid;
+    padding-bottom: 2px;
+}
+.featured-link a:hover {
+    color: var(--color-black);
+}
+
+.featured-link a:after {
+    content: '>';
+    margin-left: 5px;
+}
+
+/* Images */
+.col-md-6 img, .col-md-4 img {
+    max-width: 100%;
+}
+
+/* Footer */
+.footer-risd {
+    padding: 60px;
+}
+
+.footer-risd, .footer-risd a {
+    color: var(--color-white);
+    font-size: 16px;
+}
+
+.footer-risd .container {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footer-risd a {
+    border-bottom: 2px solid;
+    padding-bottom: 2px;
+}
+
+.footer-risd a:hover {
+    border-color: var(--color-black);
+    color: var(--color-white);
+}
+
+/* Mobile */
+@media (max-width: 576px) { 
+    h1.search-title {
+        font-size: 48px;
+    }
+
+    input[type="text"] {
+        font-size: 16px;
+    }
+
+    .layout-2x2 {
+        margin-bottom: 20px;
+    }
+
+    .layout-2x2 .libguides--gray-box {
+        width: 100%;
+    }
+
+    .layout-2x2 a {
+        margin-bottom: 16px;
+    }
+
+    /* Hours */
+    th.s-lc-w-head {
+        display: flex;
+        flex-direction:column;
+    }
+    .s-lc-w-next {
+        float: none;
+        position: relative;
+        margin-bottom: 8px !important;
+        order: 2;
+    }
+
+    .s-lc-w-previous {
+        float: none;
+        position: relative;
+        left: 0;
+        margin-bottom: 8px !important;
+        order: 1;
+    }
+    .s-lc-w-head > span {
+        width: 100%;
+        order: 0;
+        margin-bottom: 8px;
+    }
+    .s-lc-w-today-view-all {
+        text-align: center;
+    }
+
+    .footer-risd {
+        padding: 30px;
+    }
+}
+
+/* Shrink navigation a little on smaller screens */
+@media (max-width: 1050px) { 
+    .header-nav .menu-li {
+        padding: 0 !important
+    }
+}
+
+/* Mobile Nav Button */
+@media (max-width: 924px) {
+    .header-nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+        a.nav-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cta-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        float: right;
+        width: 45px;
+        height: 45px;
+        padding: 0 6px 2px;
+        box-sizing: border-box;
+        background-color: var(--color-blue);
+        transition-property: bottom,left,right;
+        transition-duration: 0.35s;
+        transition-timing-function: ease-in-out;
+        border: none;
+        cursor: pointer;
+    }
+
+    .cta-menu .cta-menu__wrapper {
+        position: relative;
+        background-color: var(--color-blue);
+        width: 21px;
+        height: 21px;
+        padding: 0;
+    }
+
+    .cta-menu .cta-menu__icon {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 21px;
+        height: 3px;
+        background-color: var(--color-white);
+        transition: 0.5s;
+        border: 0;
+        padding: 0;
+    }
+
+    .cta-menu .cta-menu__icon::before {
+        top: -9px;
+        left: 0;
+    }
+
+    .cta-menu .cta-menu__icon::after {
+        top: 9px;
+        left: 0;
+    }
+
+    .cta-menu .cta-menu__icon::before,.cta-menu .cta-menu__icon::after {
+        content: "";
+        position: absolute;
+        width: 21px;
+        height: 3px;
+        background-color: var(--color-white);
+        transition: 0.5s;
+    }
+}
+
+/* Hide Menu Label on Mobile */
+@media (max-width: 670px) {
+    .menu-label {
+        display: none;
+    }
+}
+</style>
+
+<style>
+/* Hours widget / Schedule widget */
+                .s-lc-w-today {
+                    border-spacing: 0;
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+
+                .s-lc-w-today td,
+                .s-lc-w-today th {
+                    padding: 8px 5px;
+                }
+
+                .s-lc-w-head {
+                    text-align: center;
+                    border-bottom: 1px solid #ddd;
+                }
+
+                .s-lc-w-loading {
+                    margin-top: 80px;
+                    text-align: center;
+                }
+
+                .s-lc-w-sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    border: 0;
+                }
+
+                .s-lc-w-btn {
+                    line-height: 1.5;
+                    border-radius: 3px;
+                    display: inline-block;
+                    padding: 3px 6px;
+                    margin-bottom: 0;
+                    font-size: 12px;
+                    font-weight: 400;
+                    text-align: center;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    touch-action: manipulation;
+                    cursor: pointer;
+                    user-select: none;
+                    border: 1px solid #ccc;
+                    color: #333;
+                    background-color: #fff;
+                }
+
+                .s-lc-w-btn:active,
+                .s-lc-w-btn:hover {
+                    color: #333;
+                    background-color: #d4d4d4;
+                    border-color: #8c8c8c;
+                }
+
+                .s-lc-w-previous {
+                    float: left;
+                }
+
+                .s-lc-w-next {
+                    float: right;
+                }
+
+                .s-lc-w-location td {
+                    font-weight: bold;
+                }
+
+                .s-lc-w-department .s-lc-w-name {
+                    padding-left: 20px;
+                }
+
+                .s-lc-w-times {
+                    border-bottom: 1px solid #ddd;
+                }
+
+                .s-lc-w-today-view-link {
+                    text-decoration: none;
+                }
+
+                .s-lc-w-today-view-all {
+                    padding: 8px 5px;
+                }
+
+/* hide native breadcrumbs, search bar and system footer */ 
+
+#s-lib-footer-public {
+  display: none;
+}
+
+#s-lg-guide-header-search {
+  display: none;
+}
+</style>
+
+<!-- Preload font -->
+<link rel="preload" href="http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Light.woff2" as="font" type="font/woff2" crossorigin="">
