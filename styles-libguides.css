@@ -137,11 +137,6 @@ h2, h3, h4, h5, h6 {
   font-style: bold;
 }
 
-strong {
-  font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
-  font-weight: 400;
-}
-
 a {
   font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
   color: var(--risd-blue);
