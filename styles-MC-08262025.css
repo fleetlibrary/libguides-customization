@@ -1,4 +1,6 @@
 <style>
+/**************BEGIN mc's stylesheet**********/
+
 :root {
     --color-gray: #F5F5F3;
     --color-blue: #2454FF;
@@ -40,7 +42,7 @@
 
 @font-face {
     font-family: "RISD Serif Complete";
-    font-style: bold;
+    font-style: normal;
     font-weight: 400;
     font-display: fallback;
     src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Complete_Variable.woff2') format("woff2");
@@ -156,14 +158,17 @@ h1.search-title {
 }
 
 h2 {
-    font-family: 'RISD Complete', serif !important;
+    font-family: 'RISD Serif Complete', serif !important;
     font-size: 36px !important;
+    font-weight: 100 !important;
     margin-top: 0 !important;
     margin-bottom: 40px !important;
 }
 
 h3 {
+    font-family: 'RISD Serif Complete', serif !important;
     font-size: 24px;
+    font-weight: 100 !important;
     text-transform: uppercase;
 }
 
@@ -268,7 +273,17 @@ tr.s-lc-w-times.s-lc-w-location {
     margin: 0;
 }
 
+.tab-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 .tab-btn {
+    flex: 1;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
     background-color: var(--color-blue);
     border: 2px solid var(--color-white);
     border-radius: 0;
@@ -277,8 +292,30 @@ tr.s-lc-w-times.s-lc-w-location {
 
 .tab-btn.active {
     background-color: var(--color-white);
-    border: 2px solid var(--color-blue);
+    border: 2px solid var(--color-white);
     color: var(--color-blue);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab-content input[type="text"] {
+  flex: 1;
+}
+
+.tab-content button[type="submit"] {
+  cursor: pointer;
 }
 
 .search-info {
@@ -286,8 +323,10 @@ tr.s-lc-w-times.s-lc-w-location {
     background-color: transparent;
 }
 
-
 .search-info {
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+    min-height: 2.2em;
     color: var(--color-white);
     background-color: transparent;
 }
@@ -298,9 +337,10 @@ tr.s-lc-w-times.s-lc-w-location {
 
 .search-tabs .tab-content form input[type="text"] {
     border: 0;
-    font-family: 'RISD Complete', serif;
+    font-family: 'RISD Serif Complete', serif;
     color: var(--color-blue);
     font-size: 24px;
+    font-weight: 100;
     padding: 10px 20px;
 }
 
@@ -371,11 +411,11 @@ tr.s-lc-w-times.s-lc-w-location {
 /* Mobile */
 @media (max-width: 576px) { 
     h1.search-title {
-        font-size: 48px !important;
+        font-size: 48px;
     }
 
     input[type="text"] {
-        font-size: 16px !important;
+        font-size: 16px;
     }
 
     .layout-2x2 {
@@ -596,7 +636,17 @@ tr.s-lc-w-times.s-lc-w-location {
                 .s-lc-w-today-view-all {
                     padding: 8px 5px;
                 }
-                </style>
+
+/* hide native breadcrumbs, search bar and system footer */ 
+
+#s-lib-footer-public {
+  display: none;
+}
+
+#s-lg-guide-header-search {
+  display: none;
+}
+</style>
 
 <!-- Preload font -->
 <link rel="preload" href="http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Light.woff2" as="font" type="font/woff2" crossorigin="">
