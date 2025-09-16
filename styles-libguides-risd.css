@@ -1,9 +1,8 @@
 /*-----SYSTEM-WIDE STYLES FOR LIBGUIDES-----*/
-/*-ec 8.21.25-*/
+
 
 :root {
   --risd-blue: #2454FF;
-  --dark-blue: #0011d1;
   --white: #fff;
   --off-white: #F5F5F3;
   --light-gray: #E0E0DD;
@@ -163,7 +162,6 @@ a:visited:hover {
   align-items: center;
   background-color: #fff;
   width: 100%;
-  border-bottom: #2454FF solid 3px;
 }
 
 .header img {
@@ -324,6 +322,7 @@ a:visited:hover {
   font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: 100;
 }
 
 /*ensure floating boxes have padding*/
@@ -382,15 +381,19 @@ a:visited:hover {
   font-weight: 100;
 }
 
+.s-lg-small-bold a {
+  font-weight: 100;
+}
+
 /*alter guide title*/
 
 #s-lg-guide-header-info h1,
 .s-lib-header h1 {
   font-family: 'RISD Serif Complete', Georgia, 'Times New Roman', Times, serif;
   font-weight: 100;
-  font-size: 2.5em;
+  font-size: 2em;
   color: #000;
-  padding: 20px 0px 10px;
+  padding: 0px;
 }
 
 #s-lg-guide-header-info {
@@ -410,7 +413,6 @@ button,
 .s-lib-profile-email .label-info {
   cursor: pointer;
   border-radius: 0;
-  margin: 10px 0px;
   border: 2px solid #2454FF;
   background-color: transparent;
   color: #2454FF;
