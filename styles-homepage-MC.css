@@ -1,4 +1,3 @@
-<style>
 /**************BEGIN mc's stylesheet**********/
 
 :root {
@@ -547,9 +546,7 @@ tr.s-lc-w-times.s-lc-w-location {
         display: none;
     }
 }
-</style>
 
-<style>
 /* Hours widget / Schedule widget */
                 .s-lc-w-today {
                     border-spacing: 0;
@@ -646,7 +643,3 @@ tr.s-lc-w-times.s-lc-w-location {
 #s-lg-guide-header-search {
   display: none;
 }
-</style>
-
-<!-- Preload font -->
-<link rel="preload" href="http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Light.woff2" as="font" type="font/woff2" crossorigin="">

@@ -286,7 +286,8 @@
               })();
             </script>
             <!-- END: Mobile Navigation Menu -->
-            
+
+            <!--tab switching for main search widget-->
           <script>
             // Tab switching for search-tabs widget
             document.addEventListener('DOMContentLoaded', function () {
@@ -294,13 +295,9 @@
               const tabContents = document.querySelectorAll('.search-tabs .tab-content');
               tabButtons.forEach(btn => {
                 btn.addEventListener('click', function () {
-                  // Remove active from all buttons
                   tabButtons.forEach(b => b.classList.remove('active'));
-                  // Remove active from all tab contents
                   tabContents.forEach(tc => tc.classList.remove('active'));
-                  // Add active to clicked button
                   this.classList.add('active');
-                  // Add active to corresponding tab content
                   const tabId = this.getAttribute('data-tab');
                   const content = document.getElementById(tabId);
                   if (content) content.classList.add('active');
