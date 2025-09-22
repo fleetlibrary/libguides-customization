@@ -331,12 +331,9 @@ a:visited:hover {
 }
 
 /*un-bold font on guides list*/
-.panel-heading .bold {
-  font-weight: 400;
-}
-
+.panel-heading .bold,
 .s-lg-gtitle .bold {
- font-weight: 100;
+ font-weight: 400;
 }
 
 /*alter tab size and text*/
