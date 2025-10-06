@@ -410,6 +410,7 @@ li.s-lg-er-item>a {
 /*--BUTTONS--*/
 
 button,
+a.button,
 .btn-info,
 .s-lib-profile-email .label-info {
   cursor: pointer;
@@ -424,9 +425,9 @@ button,
   transition-timing-function: ease-out;
 }
 
-button:active,
-button:focus,
-button:hover,
+a.button:active, button:active,
+a.button:focus, button:focus,
+a.button:hover, button:hover,
 .btn-info.active,
 .btn-info:focus,
 .btn-info:hover,
