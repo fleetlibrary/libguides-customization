@@ -644,7 +644,8 @@ div#s-lg-side-nav-content {
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    background-color: white;
+    background-color: var(--color-white);
+    border-color: var(--color-blue);
 }
 
 /* Search */
