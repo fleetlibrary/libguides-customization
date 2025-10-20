@@ -2,9 +2,14 @@
 
 :root {
     --color-gray: #F5F5F3;
+    --color-dark-gray: #b6b6b6;
     --color-blue: #2454FF;
-    --color-white: #fff;
+    --color-white: var(--color-white);
     --color-black: #000;
+
+    --font-primary: 'RISD Sans', Arial, Helvetica, sans-serif;
+    --font-secondary: 'RISD Serif Complete', serif;
+    --font-accent: 'RISD Serif SemiComplete', 'Georgia', serif;
 }
 
 @font-face {
@@ -18,9 +23,9 @@
 
 @font-face {
     font-family: "RISD Sans";
-    font-weight: bold;
+    font-weight: 700;
     font-display: fallback;
-    src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Sans-Bold.woff2') format("woff2");
+    src: url('//www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Sans-Bold.woff') format("woff");
 }
 
 @font-face {
@@ -106,14 +111,14 @@
 }
 
 body {
-    font-family: 'RISD Sans', Arial, Helvetica, sans-serif !important;
+    font-family: var(--font-primary) !important;
     font-size: 16px;
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
 
 .header-nav a {
-    font-family: 'RISD Sans';
+    font-family: var(--font-primary);
     text-decoration: none;
     color: var(--color-black);
 }
@@ -151,24 +156,24 @@ body {
 h1.search-title {
     color: var(--color-white);
     font-size: 80px;
-    font-family: 'RISD Serif SemiComplete', 'Georgia', serif;
+    font-family: var(--font-accent);
     font-weight: 100;
     margin-top: 0;
 }
 
 h2 {
-    font-family: 'RISD Serif Complete', serif !important;
-    font-size: 36px !important;
+    font-family: var(--font-secondary) !important;
+    font-size: 30px !important;
     font-weight: 100 !important;
     margin-top: 0 !important;
     margin-bottom: 40px !important;
 }
 
 h3 {
-    font-family: 'RISD Serif Complete', serif !important;
+    font-family: var(--font-secondary) !important;
     font-size: 24px;
     font-weight: 100 !important;
-    text-transform: uppercase;
+    margin-top: 0;
 }
 
 .row a {
@@ -336,7 +341,7 @@ tr.s-lc-w-times.s-lc-w-location {
 
 .search-tabs .tab-content form input[type="text"] {
     border: 0;
-    font-family: 'RISD Serif Complete', serif;
+    font-family: var(--font-secondary);
     color: var(--color-blue);
     font-size: 24px;
     font-weight: 100;
@@ -405,6 +410,19 @@ tr.s-lc-w-times.s-lc-w-location {
 .footer-risd a:hover {
     border-color: var(--color-black);
     color: var(--color-white);
+}
+
+.risd-seal svg {
+    fill: var(--color-white);
+    max-width: 116px;
+    height: auto;
+}
+
+/* Footer meta */
+#s-lib-footer-public {
+    margin-bottom:0;
+    background-color: var(--color-white);
+    border-top: 0;
 }
 
 /* Mobile */
@@ -547,99 +565,193 @@ tr.s-lc-w-times.s-lc-w-location {
     }
 }
 
-/* Hours widget / Schedule widget */
-                .s-lc-w-today {
-                    border-spacing: 0;
-                    border-collapse: collapse;
-                    width: 100%;
-                }
-
-                .s-lc-w-today td,
-                .s-lc-w-today th {
-                    padding: 8px 5px;
-                }
-
-                .s-lc-w-head {
-                    text-align: center;
-                    border-bottom: 1px solid #ddd;
-                }
-
-                .s-lc-w-loading {
-                    margin-top: 80px;
-                    text-align: center;
-                }
-
-                .s-lc-w-sr-only {
-                    position: absolute;
-                    width: 1px;
-                    height: 1px;
-                    padding: 0;
-                    margin: -1px;
-                    overflow: hidden;
-                    clip: rect(0, 0, 0, 0);
-                    border: 0;
-                }
-
-                .s-lc-w-btn {
-                    line-height: 1.5;
-                    border-radius: 3px;
-                    display: inline-block;
-                    padding: 3px 6px;
-                    margin-bottom: 0;
-                    font-size: 12px;
-                    font-weight: 400;
-                    text-align: center;
-                    white-space: nowrap;
-                    vertical-align: middle;
-                    touch-action: manipulation;
-                    cursor: pointer;
-                    user-select: none;
-                    border: 1px solid #ccc;
-                    color: #333;
-                    background-color: #fff;
-                }
-
-                .s-lc-w-btn:active,
-                .s-lc-w-btn:hover {
-                    color: #333;
-                    background-color: #d4d4d4;
-                    border-color: #8c8c8c;
-                }
-
-                .s-lc-w-previous {
-                    float: left;
-                }
-
-                .s-lc-w-next {
-                    float: right;
-                }
-
-                .s-lc-w-location td {
-                    font-weight: bold;
-                }
-
-                .s-lc-w-department .s-lc-w-name {
-                    padding-left: 20px;
-                }
-
-                .s-lc-w-times {
-                    border-bottom: 1px solid #ddd;
-                }
-
-                .s-lc-w-today-view-link {
-                    text-decoration: none;
-                }
-
-                .s-lc-w-today-view-all {
-                    padding: 8px 5px;
-                }
-
-/* hide native breadcrumbs, search bar and system footer */ 
-
-#s-lib-footer-public {
-  display: none;
+/* New */
+.s-lib-header.container,
+#s-lg-guide-main,
+#s-lg-guide-tabs-title-bar,
+#s-lg-tabs-container {
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
-#s-lg-guide-header-search {
-  display: none;
+.s-lib-box-content a {
+    font-size: inherit;
+    text-decoration: none;
+    color: var(--color-blue);
+}
+
+.s-lib-box-content a:hover {
+    text-decoration: underline;
+}
+
+/* This block doesn't have any content. Removing margins to eliminate the unecessary spacing between components. */
+#s-lg-guide-tabs-title-bar {
+    margin: 0;
+}
+
+.s-lib-side-borders .s-lib-box {
+    border: 1px solid #dfdfe3;
+}
+
+.s-lib-box .s-lib-box-title {
+    text-transform: none;
+    letter-spacing: 0;
+    margin-bottom: 16px !important;
+}
+
+.s-lib-header h1#s-lg-guide-name {
+    font-family: var(--font-secondary);
+    font-weight: 100;
+    font-size: 36px !important;
+    color: var(--color-black);
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+#s-lg-guide-header-info {
+    margin-bottom: 40px;
+}
+
+/* Top nav styles */
+#s-lg-tabs-container .nav-tabs > li > a, #s-lg-tabs-container .nav-tabs > li > button, #s-lg-tabs-container .nav-pills > li > a, #s-lg-tabs-container .nav-pills > li > button {
+    background-color: var(--color-gray);
+}
+
+/* Top nav box headers */
+#s-lg-col-1.col-md-3 h2, #s-lg-col-2.col-md-6 h2, #s-lg-col-3.col-md-3 h2 {
+    color: #666;
+    font-size: 16px !important;
+    font-family: var(--font-primary) !important;
+    background-color: var(--color-gray);
+    border-bottom: 1px solid #dfdfe3;
+}
+
+/* Side nav styles */
+div#s-lg-side-nav-content {
+    margin-top: 0;
+}
+
+#s-lg-side-nav-content .s-lib-box {
+   border: 0;
+}
+
+#s-lg-side-nav-content .s-lib-box-title {
+    background-color: var(--color-white);
+}
+
+.s-lg-tabs-side .s-lg-boxnav .list-group-item {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: var(--color-white);
+    border-color: var(--color-blue);
+}
+
+/* Search */
+#s-lg-guide-search-form input {
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+}
+
+input#s-lg-guide-search-terms {
+    border-bottom: 1px solid var(--color-black);
+    outline: 0;
+    padding-left: 0;
+}
+
+.input-group-btn button.btn {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border-radius: 0 !important;
+    border: 0;
+    margin-left: 16px !important;
+}
+
+/* Hours widget / Schedule widget */
+.s-lc-w-today {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.s-lc-w-today td,
+.s-lc-w-today th {
+    padding: 8px 5px;
+}
+
+.s-lc-w-head {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.s-lc-w-loading {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.s-lc-w-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.s-lc-w-btn {
+    line-height: 1.5;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 3px 6px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #ccc;
+    color: #333;
+    background-color: var(--color-white);
+}
+
+.s-lc-w-btn:active,
+.s-lc-w-btn:hover {
+    color: #333;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c;
+}
+
+.s-lc-w-previous {
+    float: left;
+}
+
+.s-lc-w-next {
+    float: right;
+}
+
+.s-lc-w-location td {
+    font-weight: bold;
+}
+
+.s-lc-w-department .s-lc-w-name {
+    padding-left: 20px;
+}
+
+.s-lc-w-times {
+    border-bottom: 1px solid #ddd;
+}
+
+.s-lc-w-today-view-link {
+    text-decoration: none;
+}
+
+.s-lc-w-today-view-all {
+    padding: 8px 5px;
 }
