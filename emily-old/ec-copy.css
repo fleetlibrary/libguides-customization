@@ -1,0 +1,63 @@
+/* COPY OF EC STYLES FOR COMBINING. Anything in here has NOT been added to new stylesheet. */
+
+
+
+
+/*--------ALTERATIONS TO LIBGUIDES DEFAULTS---------*/
+
+/* alter BOX title text */
+.s-lib-box .s-lib-box-title,
+.s-lib-public-side-header {
+  font-size: 1em;
+  letter-spacing: 1.6px;
+  font-family: var(--font-primary);
+  text-decoration: none;
+  font-weight: 100;
+}
+
+
+/*alter tab size and text*/
+#s-lg-tabs-container .nav-tabs>li>a,
+#s-lg-tabs-container .nav-pills>li>a,
+#s-lg-tabs-container .nav-tabs>li>a.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-tabs>li>a.s-lg-tab-drop,
+#s-lg-tabs-container .nav-tabs>li>a.s-lg-tab-drop:hover,
+#s-lg-tabs-container .nav-tabs>li>a.s-lg-tab-top-link:hover {
+  margin-top: 5px;
+  padding: 6px 8px;
+  font-size: 1em;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+#s-lg-guide-tabs .nav-tabs>li {
+  margin-right: 3px;
+}
+
+#s-lg-tabs-container .nav-tabs .dropdown-toggle .caret {
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+
+/*Remove underlining from links in menu and breadcrumbs*/
+.list-group-item a,
+.breadcrumb a {
+  text-decoration: none;
+}
+
+#s-lib-bc {
+  padding-top: 10px;
+}
+
+
+
+
+/*-------------HOURS WIDGET----------*/
+tr.today {
+  color: var(--orange);
+}
+
+td.s-lc-w-name {
+  width: 70%;
+}

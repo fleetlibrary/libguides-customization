@@ -1,0 +1,371 @@
+/* STYLES FOR HOMEPAGE AND WEBSITE GROUP GUIDES */
+
+/* Dependent on system-wide stylesheet for fonts, colors etc */
+
+h1.search-title {
+    color: var(--color-white);
+    font-size: 80px;
+    font-family: var(--font-accent);
+    font-weight: 100;
+    margin-top: 0;
+}
+
+/* (changed from .container) */
+#homepage {
+    margin: 80px auto;
+}
+
+/* Homepage Boxes */
+
+.libguides--gray-box {
+    background-color: var(--color-gray);
+    padding: 24px 40px;
+}
+
+.libguides--blue-box {
+    background-color: var(--color-blue);
+    padding: 80px 0;
+}
+
+.libguides--blue-box .container {
+    margin: 0 auto;
+}
+
+.layout-2x2 {
+    display: flex;
+    flex: 1 1 calc(100% - 20px);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.layout-2x2 .libguides--gray-box {
+    width: calc(50% - 10px);
+}
+
+/* made these more specific than .row because it was throwing off other pages, is this meant just for gray boxes or further into the style? */
+.libguides--gray-box a {
+    color: var(--color-black);
+    font-size: 16px;
+}
+
+.libguides--gray-box a:hover {
+    color: var(--color-blue);
+    text-decoration: none;
+}
+
+.layout-2x2 a {
+    display: inline-block;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--color-blue);
+    margin-bottom: 30px;
+}
+
+/* Homepage hours ----- please look at these, I combined 2 different sections here */
+
+button.s-lc-w-btn, .s-lc-w-today-view-all a {
+    justify-content: space-between;
+    padding: 8px 24px;;
+    border: 2px solid var(--color-blue);
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--color-blue);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition-property: color, background-color;
+    transition-duration: .25s;
+    transition-timing-function: ease-out;
+}
+
+.s-lc-w-btn {
+    line-height: 1.5;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 3px 6px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #ccc;
+    color: #333;
+    background-color: var(--color-white);
+}
+
+button.s-lc-w-btn:hover, .s-lc-w-today-view-all a:hover {
+    background-color: var(--color-blue);
+    border-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+.s-lc-w-today, .s-lc-w-name, .s-lc-w-department .s-lc-w-name, .s-lc-w-time {
+    padding: 32px 0 16px 0 !important;
+    padding-left: 0 !important;
+}
+
+td.s-lc-w-name {
+    width: auto;
+}
+
+tr.s-lc-w-times.s-lc-w-location  {
+    display: none;
+}
+
+th.s-lc-w-head {
+    position: relative;
+}
+.s-lc-w-head {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.s-lc-w-head > span {
+    font-size: 16px;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    font-weight: normal;
+}
+
+.s-lc-w-head > span.s-lc-w-head-pre {
+    display: none;
+}
+
+tr.s-lc-w-times {
+    border-bottom: 2px solid var(--color-black);
+    display: block;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.s-lc-w-times {
+    border-bottom: 1px solid #ddd;
+}
+
+tr.s-lc-w-times.s-lc-w-location {
+    margin-bottom: 0 !important;
+}
+
+.s-lc-w-time {
+    text-align: right;
+}
+
+.s-lc-w-today-view-all {
+    margin-top: 32px;
+}
+
+.s-lc-w-next {
+    float: none;
+    position: absolute;
+    right: 0;
+}
+.s-lc-w-next {
+    float: right;
+}
+
+.s-lc-w-previous {
+    float: none;
+    position: absolute;
+    left: 0;
+}
+.s-lc-w-previous {
+    float: left;
+}
+
+.s-lc-w-location td {
+    font-weight: bold;
+}
+
+.s-lc-w-department .s-lc-w-name {
+    padding-left: 20px;
+}
+
+.s-lc-w-today-view-link {
+    text-decoration: none;
+}
+
+.s-lc-w-today-view-all {
+    padding: 8px 5px;
+}
+
+.s-lc-w-today {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.s-lc-w-today td,
+.s-lc-w-today th {
+    padding: 8px 5px;
+}
+
+.s-lc-w-loading {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.s-lc-w-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.s-lc-w-btn:active,
+.s-lc-w-btn:hover {
+    color: #333;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c;
+}
+
+
+
+
+/* Homepage search */
+.search-tabs {
+    background-color: var(--color-blue);
+    margin: 0;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background-color: var(--color-blue);
+    border: 2px solid var(--color-white);
+    border-radius: 0;
+    color: var(--color-white);
+}
+
+.tab-btn.active {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-white);
+    color: var(--color-blue);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab-content input[type="text"] {
+  flex: 1;
+}
+
+.tab-content button[type="submit"] {
+  cursor: pointer;
+}
+
+.search-info {
+    font-size: 14px;
+    padding: 0.75rem 1rem;
+    min-height: 2.2em;
+    color: var(--color-white);
+    background-color: transparent;
+}
+
+.search-tabs form {
+    background-color: var(--color-white);
+}
+
+.search-tabs .tab-content form input[type="text"] {
+    border: 0;
+    font-family: var(--font-secondary);
+    color: var(--color-blue);
+    font-size: 24px;
+    font-weight: 100;
+    padding: 10px 20px;
+}
+
+.tab-content button[type="submit"] {
+    padding: .5em 1em 0em 1em;
+    background: var(--color-blue);
+    color: var(--color-white);
+    border: none;
+    margin: 4px;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+/* Featured Homepage Content */
+
+.featured-image {
+    text-align: center;
+}
+
+.featured-image img {
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.featured-link a {
+    color: var(--color-white);
+    border-bottom: 2px solid;
+    padding-bottom: 2px;
+}
+.featured-link a:hover {
+    color: var(--color-black);
+}
+
+.featured-link a:after {
+    content: '>';
+    margin-left: 5px;
+}
+
+/* Images */
+.col-md-6 img, .col-md-4 img {
+    max-width: 100%;
+}
+
+/* Box Styling to override system boxes */
+/* Colors and borders can be set in Group Look & Feel, or here */
+
+div#s-lg-side-nav-content {
+    margin-top: 0;
+}
+
+h2.s-lib-box-title {
+    font-family: var(--font-secondary) !important;
+    font-size: 30px !important;
+    font-weight: 100 !important;
+    margin-top: 0 !important;
+    margin-bottom: 40px !important;
+    color: var(--color-blue); /* this can be set in look & feel */
+}
+
+
+/* TRYING SOME THINGS OUT FOR THE WHOLE LIBAPPS */
+
+
+div#s-lg-guide-header.container {
+    background-color: pink;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 80px;
+    padding-right: 80px;
+    width: auto;
+}
