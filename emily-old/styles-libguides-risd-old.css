@@ -1,0 +1,501 @@
+/*-----SYSTEM-WIDE STYLES FOR LIBGUIDES-----*/
+
+
+:root {
+  --risd-blue: #2454FF;
+  --white: #fff;
+  --off-white: #F5F5F3;
+  --light-gray: #E0E0DD;
+  --mid-gray: #B6B6B6;
+  --black: #000000;
+  --purple: #BE53F7;
+  --orange: #FF6C2F;
+  --green: #00A95C;
+  --gold: #B97000;
+  --pink: #E44C9A;
+}
+
+@font-face {
+  font-family: "RISD Sans";
+  font-style: normal;
+  font-weight: 100;
+  font-display: fallback;
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Sans_Variable.woff2') format("woff2-variations");
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Sans-Regular.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "RISD Sans";
+  font-weight: bold;
+  font-display: fallback;
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Sans-Bold.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "RISD Sans";
+  font-style: italic;
+  font-display: fallback;
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Sans-Regular_Italic.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "RISD Serif Complete";
+  font-style: normal;
+  font-weight: 100;
+  font-display: fallback;
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Complete_Variable.woff2') format("woff2-variations");
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Complete-Light.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "RISD Serif Complete";
+  font-style: bold;
+  font-weight: 400;
+  font-display: fallback;
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Complete_Variable.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "RISD Serif Complete";
+  font-style: italic;
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Complete-Light_Italic.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "RISD Serif SemiComplete";
+  font-style: normal;
+  font-weight: 100;
+  font-display: fallback;
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Variable.woff2') format("woff2");
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Light.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "RISD Serif SemiComplete";
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Variable.woff2') format("woff2");
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Light.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "RISD Serif Semicomplete";
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Semibold.woff2) format("woff2");
+  src: url(http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Variable.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "RISD Serif Semicomplete";
+  font-style: normal;
+  font-weight: bold;
+  font-display: fallback;
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_SemiComplete-Bold.woff2') format("woff2");
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Variable.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "RISD Serif Semicomplete";
+  font-style: italic;
+  font-display: fallback;
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Semi-Complete_Italic_Variable.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "RISD Serif Incomplete";
+  font-style: normal;
+  font-weight: 100;
+  font-display: fallback;
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Incomplete-Light.woff2') format("woff2");
+  src: url('http://www.risd.edu/themes/custom/risd_base_theme/dist/fonts/RISD_Serif_Incomplete_Variable.woff2') format("woff2");
+}
+
+body,
+ul,
+p {
+  font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: #222222;
+}
+
+body {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+h1 {
+  font-family: 'RISD Serif Complete', Georgia, 'Times New Roman', Times, serif;
+  font-weight: 100;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+a,
+a:visited {
+  font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
+  color: var(--risd-blue);
+  text-decoration: underline 2px var(--black) auto;
+}
+
+a:hover,
+a:focus,
+a:visited:hover {
+  color: var(--risd-blue);
+}
+
+/* ---------PAGE HEADER--------- */
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+}
+
+.header img {
+  height: 50px;
+  max-height: 100px;
+  width: auto;
+  display: block;
+  padding-left: 20px;
+}
+
+.header-nav {
+  display: flex !important;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  gap: 1.5rem;
+}
+
+.header-nav .logo-li {
+  margin-right: auto !important;
+  padding-left: 0 !important;
+}
+
+.header-nav .menu-li,
+.header-nav .header-more {
+  float: none !important;
+  margin: 0 !important;
+  padding: 0 10px !important;
+}
+
+.header-nav .header-menu {
+  right: 0;
+  left: auto;
+}
+
+.header-nav li {
+  padding: 0;
+}
+
+.header-nav a {
+  float: none;
+  padding: 10px 10px;
+  color: #000000;
+  text-decoration: none;
+  text-decoration-color: var(--risd-blue);
+  font-size: 16px;
+  font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
+  font-style: regular;
+  line-height: 25px;
+}
+
+.header-nav .menu-li a:hover {
+  background: var(--risd-blue);
+  color: #fff;
+}
+
+/* -----------DROPDOWN MENU----------- */
+
+.header-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  text-align: right;
+}
+
+.header-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+  font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
+  text-align: right;
+}
+
+.header-menu li a:hover {
+  background: var(--risd-blue);
+  color: #fff;
+}
+
+.more-btn {
+  float: none;
+  /* remove float */
+  padding: 10px 10px;
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+.more-btn:hover {
+  color: #fff;
+  background: var(--risd-blue);
+  cursor: pointer;
+}
+
+.header-nav .header-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.header-nav .header-more:hover .header-menu,
+.header-nav .header-more:focus-within .header-menu {
+  display: block;
+}
+
+/* Responsive header */
+@media (max-width: 900px) {
+  .header-nav {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .header-nav .logo-li {
+    order: -1;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  .header-nav .logo-li img {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 80vw;
+    height: auto;
+  }
+
+  .header-nav li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/*--------ALTERATIONS TO LIBGUIDES DEFAULTS---------*/
+
+/* alter BOX title text */
+.s-lib-box .s-lib-box-title,
+.s-lib-public-side-header {
+  font-size: 1em;
+  letter-spacing: 1.6px;
+  font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 100;
+}
+
+/*ensure floating boxes have padding*/
+.s-lib-floating-box {
+  padding: 10px;
+}
+
+/*un-bold font on guides list*/
+.panel-heading .bold,
+.s-lg-gtitle .bold {
+ font-weight: 400;
+}
+
+/*alter tab size and text*/
+#s-lg-tabs-container .nav-tabs>li>a,
+#s-lg-tabs-container .nav-pills>li>a,
+#s-lg-tabs-container .nav-tabs>li>a.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-tabs>li>a.s-lg-tab-drop,
+#s-lg-tabs-container .nav-tabs>li>a.s-lg-tab-drop:hover,
+#s-lg-tabs-container .nav-tabs>li>a.s-lg-tab-top-link:hover {
+  margin-top: 5px;
+  padding: 6px 8px;
+  font-size: 1em;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+#s-lg-guide-tabs .nav-tabs>li {
+  margin-right: 3px;
+}
+
+#s-lg-tabs-container .nav .dropdown-toggle .caret {
+  border-top-color: #000;
+}
+
+#s-lg-tabs-container .nav-tabs .dropdown-toggle .caret {
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+/*add more space under top-nav tabs*/
+.s-lib-main {
+  padding-top: 25px;
+}
+
+/*Remove underlining from links in menu and breadcrumbs*/
+.list-group-item a,
+.breadcrumb a {
+  text-decoration: none;
+}
+
+#s-lib-bc {
+  padding-top: 10px;
+}
+
+#s-lib-bc-list li {
+  font-weight: 100;
+}
+
+.s-lg-small-bold a {
+  font-weight: 100;
+}
+
+/*alter guide title*/
+
+#s-lg-guide-header-info h1,
+.s-lib-header h1 {
+  font-family: 'RISD Serif Complete', Georgia, 'Times New Roman', Times, serif;
+  font-weight: 100;
+  font-size: 2em;
+  color: #000;
+  padding: 0px;
+}
+
+#s-lg-guide-header-info {
+  padding-bottom: 10px;
+}
+
+/* Make E-Reserves titles bold */
+li.s-lg-er-item>a {
+  font-family: 'RISD Sans', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+/*--BUTTONS--*/
+
+button,
+a.button,
+.btn-info,
+.s-lib-profile-email .label-info {
+  cursor: pointer;
+  border-radius: 0;
+  border: 2px solid #2454FF;
+  background-color: transparent;
+  color: #2454FF;
+  font-weight: 400;
+  text-decoration: none;
+  transition-property: color, background-color;
+  transition-duration: .25s;
+  transition-timing-function: ease-out;
+}
+
+a.button:active, button:active,
+a.button:focus, button:focus,
+a.button:hover, button:hover,
+.btn-info.active,
+.btn-info:focus,
+.btn-info:hover,
+.s-lib-profile-email .label-info:focus,
+.s-lib-profile-email .label-info:hover {
+  color: #fff;
+  background-color: #2454FF;
+  border-color: #2454FF;
+}
+
+.nav-pills>li.active>button,
+.nav-pills>li.active>button:focus,
+.nav-pills>li.active>button:hover {
+  color: #fff;
+  background-color: var(--risd-blue);
+  text-decoration: none;
+  border-radius: 0;
+}
+
+.nav .s-lg-index-nav-btn>button {
+  color: var(--risd-blue);
+}
+
+.nav .s-lg-index-nav-btn>button:hover {
+  border-radius: 0;
+}
+
+
+
+/*--------------FOOTER AREA--------------*/
+
+.footer-risd {
+  background: #111;
+  background-size: contain;
+  color: #fff;
+  overflow: hidden;
+  padding: 30px;
+  text-align: left;
+  max-width: 100% !important;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'RISD Sans', Arial, sans-serif;
+}
+
+.footer-risd a,
+.footer-risd p {
+  color: #fff;
+}
+
+.footer a:hover {
+  text-decoration: underline solid #fff;
+}
+
+
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+.footerlinks {
+  padding: 2em 0 3em 0;
+}
+
+/*-------------HOURS WIDGET----------*/
+tr.today {
+  color: var(--orange);
+}
+
+td.s-lc-w-name {
+  width: 70%;
+}
