@@ -121,8 +121,6 @@ h2 {
     font-family: var(--font-secondary) !important;
     font-size: 30px !important;
     font-weight: 100 !important;
-    margin-top: 0 !important;
-    margin-bottom: 40px !important;
 }
 
 h3 {
@@ -140,8 +138,8 @@ h4, h5, h6 {
 body {
     font-family: var(--font-primary) !important;
     font-size: 16px;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+/*    padding-left: 0 !important;
+    padding-right: 0 !important;  trying without this for now - messes up mobile view */
 }
 
 /* This was added more specifically with a .s-lib-box-content class, trying it at the "a" level for now */
@@ -156,162 +154,6 @@ a:hover, a:focus, a:visited:hover {
     text-decoration: underline;
 }
 
-/** Header navigation and dropdown menu **/
-
-.header {
-  display: flex;
-  align-items: center;
-  background-color: var(--color-white);
-  width: 100%;
-}
-
-.header img {
-  height: 50px;
-  max-height: 100px;
-  width: auto;
-  display: block;
-  padding-left: 20px;
-}
-
-.header-nav {
-  display: flex !important;
-  align-items: center;
-  width: 100%;
-  list-style: none;
-  padding: 0;
-  background: var(--color-white);
-  gap: 1.5rem;
-}
-
-.header-nav .logo-li {
-  margin-right: auto !important;
-  padding-left: 0 !important;
-}
-
-.header-nav .menu-li,
-.header-nav .header-more {
-  float: none !important;
-  margin: 0 !important;
-  padding: 0 10px !important;
-}
-
-.header-nav .header-menu {
-  right: 0;
-  left: auto;
-}
-
-.header-nav li {
-  padding: 0;
-}
-
-.header-nav a {
-  float: none;
-  padding: 10px 10px;
-  font-family: var(--font-primary);
-  color: var(--color-black);
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 25px;
-}
-
-.header-menu {
-  display: none;
-  position: absolute;
-  right: 0;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  z-index: 1000;
-  text-align: right;
-}
-
-.header-menu li a {
-  display: block;
-  padding: 10px 20px;
-  color: var(--color-black);
-  text-decoration: none;
-  font-family: var(--font-primary);
-  text-align: right;
-}
-
-/* header links hover */
-.header-nav .menu-li a:hover {
-  background: var(--color-blue);
-  text-decoration: none;
-  color: var(--color-white);
-}
-
-/* header dropdown menu hover */
-.header-menu li a:hover {
-  background: var(--color-blue);
-  text-decoration: none;
-  color: var(--color-white);
-}
-
-.header-more .nav-btn {
-  float: none;
-  padding: 10px 10px;
-  color: var(--color-black);
-  text-decoration: none;
-  text-align: center;
-  font-size: 16px;
-  font-family: var(--font-primary);
-  font-weight: 100;
-  line-height: 25px;
-}
-
-.header-more .nav-btn:hover {
-  background: var(--color-blue);
-  cursor: pointer;
-  color: var(--color-white);
-  text-decoration: none;
-}
-
-.header-nav .header-menu {
-  display: none;
-  position: absolute;
-  background: var(--color-white);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  min-width: 180px;
-  z-index: 1000;
-}
-
-.header-nav .header-more:hover .header-menu,
-.header-nav .header-more:focus-within .header-menu {
-  display: block;
-}
-
-/* Responsive header */
-@media (max-width: 900px) {
-  .header-nav {
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-  }
-
-  .header-nav .logo-li {
-    order: -1;
-    margin-bottom: 10px;
-    padding: 0;
-  }
-
-  .header-nav .logo-li img {
-    display: block;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 80vw;
-    height: auto;
-  }
-
-  .header-nav li {
-    margin: 0;
-    padding: 0;
-  }
-}
 
 /*   Footer   */
 
@@ -415,26 +257,11 @@ footer ul {
     }
 }
 
-/* Shrink navigation a little on smaller screens */
-@media (max-width: 1050px) { 
-    .header-nav .menu-li {
-        padding: 0 !important
-    }
-}
 
 /* Mobile Nav Button */
 @media (max-width: 924px) {
-    .header-nav {
-        flex-direction: row;
-        align-items: center;
-    }
 
-        a.nav-btn {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
+    /* what is this? */
     .cta-menu {
         display: flex;
         align-items: center;
@@ -514,17 +341,6 @@ footer ul {
     margin: 0;
 }
 
-/* This can be set in the LibGuides look & feel options
-.s-lib-side-borders .s-lib-box {
-    border: 1px solid #dfdfe3;
-} */
-
-.s-lib-box .s-lib-box-title {
-    text-transform: none;
-    letter-spacing: 0;
-    margin-bottom: 16px !important;
-}
-
 .s-lib-header h1#s-lg-guide-name {
     font-family: var(--font-secondary);
     font-weight: 100;
@@ -539,10 +355,10 @@ footer ul {
 }
 
 .s-lib-box-content {
-    padding: 15px;
+    padding: 12px 8px;
 }
 
-/* modify look of box-level navigation */
+/* modify look of box-level tab navigation */
 .s-lg-tabs-side .s-lg-boxnav .list-group-item {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -555,19 +371,16 @@ footer ul {
 /* Box headers */
 
 h2.s-lib-box-title {
+    text-transform: uppercase !important;
+    letter-spacing: 0;
     font-size: 16px !important;
     font-family: var(--font-primary) !important;
-
-/* This can be set in the LibGuides look & feel options
-    background-color: var(--color-gray);
-    border-bottom: 1px solid #dfdfe3;
-    color: #666; */
 }
 
 /* Separate side and top nav styles have been removed */
 
-
 /* Guide search */
+
 #s-lg-guide-search-form input {
     box-shadow: none;
     border: 0;
