@@ -352,8 +352,7 @@ h2.s-lib-box-title {
     font-family: var(--font-secondary) !important;
     font-size: 30px !important;
     font-weight: 100 !important;
-    margin-top: 0 !important;
-    margin-bottom: 40px !important;
+    text-transform: none !important;
     color: var(--color-blue); /* this can be set in look & feel */
 }
 
