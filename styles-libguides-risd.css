@@ -155,7 +155,228 @@ a:hover, a:focus, a:visited:hover {
 }
 
 
-/*   Footer   */
+/*-----------------------------------------HEADER-----------------------------------------*/
+
+.nav-ul {
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 1.5rem;
+}
+
+.nav-li {
+    float: none !important;
+    padding: 10px;
+}
+
+/* Lists */
+
+
+.nav-ul #lockup {
+    margin-right: auto !important; /* float links to right of lockup */
+    padding-left: 0 !important;
+}
+
+.nav-ul #lockup a {
+    padding-left: 0 !important;
+}
+
+.nav-ul #lockup img {
+    max-height: 60px;
+    width: auto;
+}
+
+.header a {
+    font-family: var(--font-primary);
+    color: var(--color-black);
+    text-decoration: none;
+    font-size: 16px;
+    
+}
+
+.header a:hover,
+.header a:focus {
+    background: var(--color-blue);
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+#lockup a:hover,
+#lockup a:focus {
+    background: transparent;
+}
+
+.nav-li a {
+    float: none;
+    padding: 10;
+    line-height: 25px;
+}
+
+.nav-ul #more-menu:hover .menu-ul,
+.nav-ul #more-menu:focus-within .menu-ul {
+    display: block;
+}
+
+.nav-ul #more-menu:hover svg  {
+     color: var(--color-white) !important;
+}
+
+
+/* Hide mobile menu */
+.nav-ul > #mobile-menu {
+    display: none;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+.desktop-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--color-blue);
+}
+
+.mobile-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--color-white);
+}
+
+/* Desktop dropdown menu */
+#menu-toggle, #mobile-toggle {
+    cursor: pointer;
+    padding: 10px 14px;
+    background: var(--color-white);
+    border: none;
+}
+
+#menu-toggle:hover, #menu-toggle:focus,
+#mobile-toggle:hover, #mobile-toggle:focus {
+    background: var(--color-blue);
+    color: var(--color-white);
+}
+
+/* menu lists hidden by default, visible when open */
+#menu-list, #mobile-menu-list {
+    list-style: none !important;
+    margin: 8px 0 0 0;
+    padding: 0;
+    background: var(--color-white);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: absolute;
+    right: 0;
+    min-width: 220px;
+    z-index: 1000;
+    display: none;
+}
+
+#menu-list.open, #mobile-menu-list.open {
+    display: block;
+}
+
+/* Position menus relative to their li container so right:0 aligns to the toggle */
+#more-menu, #mobile-menu {
+    position: relative;
+}
+
+/* Prevent menus from overflowing the viewport on very small screens */
+#menu-list, #mobile-menu-list {
+    left: auto;
+    right: 0;
+    max-width: calc(100vw - 32px);
+    box-sizing: border-box;
+}
+
+#more-menu .menu-ul li a {
+    display: block;
+    padding: 10px 16px;
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+#more-menu .menu-ul li a:hover {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+#more-menu details:not([open]) .menu-list {
+    display: none;
+}
+
+
+/* Mobile menu */
+
+@media screen and (max-width: 1080px){
+    /* Hide all top-level nav items except the logo */
+    .nav-ul > li {
+        display: none;
+    }
+    
+    .nav-ul > #lockup {
+        display: list-item;
+    }
+    
+    /* Show the mobile menu */
+    .nav-ul > #mobile-menu {
+        display: list-item;
+    }
+    
+    .nav-ul {
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    #mobile-menu details {
+        position: relative;
+    }
+    
+    #mobile-menu .mobile-menu-btn {
+        cursor: pointer;
+        padding: 10px 14px;
+        background: var(--color-blue);
+        color: var(--color-white);
+        border-radius: none;
+    }
+    
+#mobile-menu-list ul,
+#mobile-menu-list ul li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}   
+
+    #mobile-menu .mobile-menu-list li a {
+        display: block;
+        padding: 10px 16px;
+        color: var(--color-black);
+        text-decoration: none;
+    }
+    
+    #mobile-menu .mobile-menu-list li a:hover {
+        background-color: var(--color-blue);
+        color: var(--color-white);
+        text-decoration: none;
+    }
+    
+    /* Hide the menu on close */
+    #mobile-menu details:not([open]) .mobile-menu-list {
+        display: none;
+    }
+}
+
+/*------------------------------------------------FOOTER-----------------------------------------*/
 
 .footer-risd {
     padding: 60px;

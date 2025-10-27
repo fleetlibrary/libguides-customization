@@ -360,11 +360,21 @@ h2.s-lib-box-title {
 /* TRYING SOME THINGS OUT FOR THE WHOLE LIBAPPS */
 
 
-div#s-lg-guide-header.container {
+.container#s-lg-guide-header {
     background-color: pink;
     margin-left: 0;
     margin-right: 0;
     padding-left: 80px;
     padding-right: 80px;
     width: auto;
+}
+
+/* or: */
+
+.container#s-lg-guide-header {
+    background-color: #f3f3f5;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    width: 100%;
+    padding: 0px 40px;
 }
