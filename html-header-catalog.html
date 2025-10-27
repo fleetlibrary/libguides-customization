@@ -1,58 +1,114 @@
+<link rel="stylesheet" href="header-test.css"> 
 
-<link rel="stylesheet" href="styles-libguides-vendor.css">
-<link rel="stylesheet" href="styles-libguides-risd.css">
-<link rel="stylesheet" href="header-test.css">
-
-
-<html>
-  <body class="s-lg-guide-body">
 <div class="header">
   <ul class="nav-ul">
-    <li class="nav-li" id="lockup"><a href="https://risd.libguides.com/homepage"><img src="https://d2jv02qf7xgjwx.cloudfront.net/sites/815/groups/32556/banner/RISD_fleet_library_lockup.png" alt="Fleet Library"></a></li>
-    <li class="nav-li"><a href="https://librarycat.risd.edu/patroninfo">Login / Renew</a></li>
-    <li class="nav-li" id="more-menu"> 
-      <!--Dropdown menu-->
-      <details id="menu-details">
-        <summary class="menu-btn" aria-controls="menu-list">
-            <svg class="desktop-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect y="3" width="24" height="3" fill="currentColor" />
-                <rect y="11" width="24" height="3" fill="currentColor" />
-                <rect y="19" width="24" height="3" fill="currentColor" />
-            </svg>
-        </summary>
-
-
-
-
-      </details>
-        
+    <li class="nav-li logo">
+      <a aria-label="Fleet Library Website" href="https://risd.libguides.com/homepage">
+        <img src="https://d2jv02qf7xgjwx.cloudfront.net/accounts/128622/images/seal_blue_small.png" alt="RISD seal"></a>
+      </li>
+      <li class="nav-li logo">
+        <a aria-label="Providence Athenaeum Website" href="https://providenceathenaeum.org">
+          <img src="https://d2jv02qf7xgjwx.cloudfront.net/accounts/128622/images/ath-sm.png" alt="Providence Athenaeum logo">
+        </a>
+      </li>
+      <li class="nav-li" id="title"><p>Fleet Library & Providence Athenaeum | <span style="color:var(--color-blue)">Library Catalog</span></p></li>
+      <li class="nav-li" id="login"><a href="https://librarycat.risd.edu/patroninfo">Login / Renew</a></li>
       
-      <ul class="more-ul">
-        <li><a href="https://risd.libguides.com/collections-spaces">Collections & Spaces</a></li>
-        <li><a href="https://risd.libguides.com/research-learning">Research & Learning</a></li>
-        <li><a href="https://risd.libguides.com/about">About Fleet Library</a></li>
-        <li><a href="https://risd.libguides.com/access">Hours, Access & Borrowing</a></li>
-    <li><a href="https://risd.libanswers.com/form?queue_id=7539">Report an Issue</a></li>
-      </ul>
-    </li>
-    <!-- Mobile menu -->
-    <li class="nav-li" id="mobile-menu" aria-hidden="true">
-      <details id="mobile-details">
-        <summary class="mobile-menu-btn" aria-controls="mobile-menu-list">
+      <li class="nav-li" id="more-menu"> 
+        
+        <!--Dropdown menu-->
+        <button id="menu-toggle" class="menu-btn" aria-expanded="false" aria-controls="menu-list" aria-haspopup="true">
+          <svg class="desktop-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="3" width="24" height="3" fill="currentColor" />
+            <rect y="11" width="24" height="3" fill="currentColor" />
+            <rect y="19" width="24" height="3" fill="currentColor" />
+          </svg>
+        </button>
+        <ul id="menu-list" class="menu-ul" hidden>
+          <li>
+             <a href="https://risd.libguides.com/access">Fleet Hours & Access</a> 
+          </li>
+          <li>
+             <a href="https://risd.libguides.com/fleet">Fleet Search</a> 
+          </li>
+          
+          
+        </ul>
+      </li>
+      <!-- Mobile menu -->
+      <li class="nav-li" id="mobile-menu">
+        <button id="mobile-toggle" class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu-list" aria-haspopup="true">
           <svg class="mobile-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="3" width="24" height="3" fill="currentColor" />
             <rect y="11" width="24" height="3" fill="currentColor" />
             <rect y="19" width="24" height="3" fill="currentColor" />
           </svg>
           <span class="visually-hidden">Menu</span>
-        </summary>
-        <ul class="mobile-menu-list" id="mobile-menu-list">
+        </button>
+        <nav id="mobile-menu-list" class="mobile-menu-list" hidden>
+          <ul>
+            <li><a href="https://librarycat.risd.edu/patroninfo">Login / Renew</a></li>
+            <li><a href="https://providenceathenaeum.org">Athenaeum Website</a></li>
+            <li><a href="https://library.risd.edu">Fleet Library Website</a></li>
+          </ul>
+        </nav>
+      </li>
+    </ul>
+  </div>
+  <script>
+    // Header menu button toggling
 
-        </ul>
-      </details>
-    </li>
-  </ul>
-</div>
+    (function(){
+      function setupToggle(buttonId, menuId) {
+        const btn = document.getElementById(buttonId);
+        const menu = document.getElementById(menuId);
+        if (!btn || !menu) {
+          console.warn('setupToggle: missing element', { buttonId, menuId, btn, menu });
+          return;
+        }
 
-</body>
-</html>
+        function open() {
+          console.debug('open menu', menuId);
+          btn.setAttribute('aria-expanded', 'true');
+          menu.removeAttribute('hidden');
+          menu.classList.add('open');
+        }
+        function close() {
+          console.debug('close menu', menuId);
+          btn.setAttribute('aria-expanded', 'false');
+          menu.setAttribute('hidden', '');
+          menu.classList.remove('open');
+        }
+
+        btn.addEventListener('click', function (e) {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          if (expanded) close(); else open();
+        });
+
+        document.addEventListener('click', function (e) {
+          if (!menu.classList.contains('open')) return;
+          if (btn.contains(e.target) || menu.contains(e.target)) return;
+          close();
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && menu.classList.contains('open')) {
+            close();
+            btn.focus();
+          }
+        });
+      }
+
+      function init() {
+        setupToggle('menu-toggle', 'menu-list');
+        setupToggle('mobile-toggle', 'mobile-menu-list');
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+
+  </script>
