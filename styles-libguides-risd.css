@@ -119,13 +119,11 @@ h1{
 
 h2 {
     font-family: var(--font-secondary) !important;
-    font-size: 30px !important;
     font-weight: 100 !important;
 }
 
 h3 {
     font-family: var(--font-secondary) !important;
-    font-size: 24px;
     font-weight: 100 !important;
     margin-top: 0;
 }
@@ -138,11 +136,9 @@ h4, h5, h6 {
 body {
     font-family: var(--font-primary) !important;
     font-size: 16px;
-/*    padding-left: 0 !important;
-    padding-right: 0 !important;  trying without this for now - messes up mobile view */
+    padding: 0px !important;
 }
 
-/* This was added more specifically with a .s-lib-box-content class, trying it at the "a" level for now */
 a, a:visited {
     font-family: inherit;
     color: var(--color-blue);
@@ -171,16 +167,8 @@ a:hover, a:focus, a:visited:hover {
     padding: 10px;
 }
 
-/* Lists */
-
-
 .nav-ul #lockup {
     margin-right: auto !important; /* float links to right of lockup */
-    padding-left: 0 !important;
-}
-
-.nav-ul #lockup a {
-    padding-left: 0 !important;
 }
 
 .nav-ul #lockup img {
@@ -188,30 +176,31 @@ a:hover, a:focus, a:visited:hover {
     width: auto;
 }
 
-.header a {
+.nav-li a {
     font-family: var(--font-primary);
     color: var(--color-black);
     text-decoration: none;
     font-size: 16px;
-    
 }
 
-.header a:hover,
-.header a:focus {
+.header li:hover,
+.header li:focus {
     background: var(--color-blue);
     text-decoration: none;
+}
+
+.nav-li:hover a  {
     color: var(--color-white);
 }
 
-#lockup a:hover,
-#lockup a:focus {
+#lockup:hover,
+#lockup:focus {
     background: transparent;
 }
 
-.nav-li a {
-    float: none;
-    padding: 10;
-    line-height: 25px;
+.nav-ul #more-menu{
+   padding: 0px;
+   margin-right: 10px;
 }
 
 .nav-ul #more-menu:hover .menu-ul,
@@ -318,7 +307,7 @@ a:hover, a:focus, a:visited:hover {
 
 /* Mobile menu */
 
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 992px){
     /* Hide all top-level nav items except the logo */
     .nav-ul > li {
         display: none;
@@ -328,7 +317,7 @@ a:hover, a:focus, a:visited:hover {
         display: list-item;
     }
     
-    /* Show the mobile menu */
+    /* Show the mobile menu button */
     .nav-ul > #mobile-menu {
         display: list-item;
     }
@@ -379,36 +368,60 @@ a:hover, a:focus, a:visited:hover {
 /*------------------------------------------------FOOTER-----------------------------------------*/
 
 .footer-risd {
-    padding: 60px;
+    padding: 40px;
     background-color: var(--color-black);
-    max-width: 100 !important;
+    max-width: 100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 
 .footer-risd, .footer-risd a {
     color: var(--color-white);
     font-family: var(--font-primary);
-    font-size: 16px;
-}
-
-.footer-risd .container {
-    margin-top: 0;
-    margin-bottom: 0;
+    font-size: 14px;
 }
 
 .footer-risd a {
-    border-bottom: 2px solid;
-    padding-bottom: 2px;
+    text-decoration: underline var(--color-white);
+    text-underline-offset: 2px;
 }
 
 .footer-risd a:hover {
-    border-color: var(--color-black);
     color: var(--color-white);
+    text-decoration: none;
 }
 
-.risd-seal svg {
-    fill: var(--color-white);
-    max-width: 116px;
-    height: auto;
+.risd-seal a {
+    text-decoration: none;
+}
+
+.footer-risd .risd-seal img,
+.footer-risd .risd-seal svg {
+    width: 116px;
+    padding: 0px 5px 5px 0px;
+}
+
+.footer-risd .footerlinks {
+    display: flex;
+}
+
+.footer-risd .footerlinks .col-xs-2 {
+    flex: 0 0 116px;
+
+}
+
+@media (max-width: 767px) {
+    .footer-risd .footerlinks {
+        flex-direction: column;
+    }
+    .footer-risd .risd-seal {
+        margin-bottom: 12px;
+    }
+
+#s-lib-side-borders {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 }
 
 footer ul {
@@ -416,34 +429,16 @@ footer ul {
   padding-left: 0;
 }
 
-/* Footer meta */
-#s-lib-footer-public {
-    margin-bottom:0;
-    background-color: var(--color-white);
+/* lg footer */
+.s-lib-footer {
+    margin-top: 15px;
+    background-color: var(--color-gray);
     border-top: 0;
 }
 
-/* Mobile */
+
+
 @media (max-width: 576px) { 
-    h1.search-title {
-        font-size: 48px;
-    }
-
-    input[type="text"] {
-        font-size: 16px;
-    }
-
-    .layout-2x2 {
-        margin-bottom: 20px;
-    }
-
-    .layout-2x2 .libguides--gray-box {
-        width: 100%;
-    }
-
-    .layout-2x2 a {
-        margin-bottom: 16px;
-    }
 
     /* Mobile Hours */
     th.s-lc-w-head {
@@ -479,10 +474,10 @@ footer ul {
 }
 
 
-/* Mobile Nav Button */
+/* Mobile Nav Button -   what is this? cta?
 @media (max-width: 924px) {
 
-    /* what is this? */
+   
     .cta-menu {
         display: flex;
         align-items: center;
@@ -539,14 +534,14 @@ footer ul {
         background-color: var(--color-white);
         transition: 0.5s;
     }
-}
+} */
 
-/* Hide Menu Label on Mobile */
+/* Hide Menu Label on Mobile 
 @media (max-width: 670px) {
     .menu-label {
         display: none;
     }
-}
+} */
 
 /* New Edits from Catherine */
 .s-lib-header.container,
@@ -597,8 +592,6 @@ h2.s-lib-box-title {
     font-size: 16px !important;
     font-family: var(--font-primary) !important;
 }
-
-/* Separate side and top nav styles have been removed */
 
 /* Guide search */
 
@@ -655,11 +648,17 @@ a.s-lg-tab-top-link.pull-left {
 .panel-heading .bold,
 .s-lg-gtitle .bold,
 #s-lib-bc-list li,
-.s-lg-small-bold a, 
+.s-lg-bold a, 
 #s-lg-guide-tabs .nav-pills > li > a,
 #s-lg-guide-tabs .nav-tabs > li > a,
 a.s-lg-tab-top-link {
  font-weight: 100 !important;
+}
+
+#s-lib-footer-login-link a, 
+#s-lib-footer-support-link a {
+    color: var(--color-blue);
+
 }
 
 /* Make E-Reserves titles bold */

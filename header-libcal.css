@@ -120,11 +120,13 @@ h1{
 
 h2 {
     font-family: var(--font-secondary) ;
+    font-size: 30px ;
     font-weight: 100 ;
 }
 
 h3 {
     font-family: var(--font-secondary) ;
+    font-size: 24px;
     font-weight: 100 ;
 }
 
@@ -169,7 +171,13 @@ a:hover, a:focus, a:visited:hover {
     padding: 10px;
 }
 
-/* Menus */
+.header p {
+    font-family: var(--font-secondary);
+    font-weight: 100;
+    font-size: 24px;
+}
+
+/* Lists */
 
 
 .nav-ul #lockup a {

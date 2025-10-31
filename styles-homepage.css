@@ -357,24 +357,24 @@ h2.s-lib-box-title {
 }
 
 
-/* TRYING SOME THINGS OUT FOR THE WHOLE LIBAPPS */
+@media (max-width: 576px) { 
+    h1.search-title {
+        font-size: 48px;
+    }
 
+    input[type="text"] {
+        font-size: 16px;
+    }
 
-.container#s-lg-guide-header {
-    background-color: pink;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 80px;
-    padding-right: 80px;
-    width: auto;
-}
+    .layout-2x2 {
+        margin-bottom: 20px;
+    }
 
-/* or: */
+    .layout-2x2 .libguides--gray-box {
+        width: 100%;
+    }
 
-.container#s-lg-guide-header {
-    background-color: #f3f3f5;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-    width: 100%;
-    padding: 0px 40px;
+    .layout-2x2 a {
+        margin-bottom: 16px;
+    }
 }
