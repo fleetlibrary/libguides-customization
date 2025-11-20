@@ -172,6 +172,11 @@ a:hover, a:focus, a:visited:hover {
     text-decoration: underline;
 }
 
+.nav .fa-external-link {
+    font-size: 12px !important;
+    color: var(--color-black);
+}
+
 
 /*-----------------------------------------HEADER-----------------------------------------*/
 
@@ -656,6 +661,20 @@ h1#s-lib-public-header-title {
     font-size: 14px;
 }
 
+/* tabbed box */
+
+.nav-tabs>li {
+    border: 1px solid var(--color-dark-gray);
+    background-color: var(--color-gray);
+    margin: 2px 5px 0px 0px;
+    border-bottom: none;
+}
+
+.nav-tabs>li>a{
+    border-radius: 0px;
+}
+
+
 /* Box headers */
 
 h2.s-lib-box-title {
@@ -713,6 +732,7 @@ input#s-lg-guide-search-terms {
 #s-lg-guide-tabs .nav-tabs>li>a,
 #s-lg-guide-tabs .nav-pills>li>a {
     border: 1px solid var(--tab-borders);
+    border-left: 2px solid var(--color-black);
 }
 
 .nav-tabs>li>a {
