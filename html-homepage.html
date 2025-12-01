@@ -17,101 +17,98 @@
               <form action="https://librarycat.risd.edu/search/X?" method="get" target="_blank">
                 <input type="text" id="catalog-input" name="SEARCH" placeholder="Search RISD + Athenaeum collections">
                 <button type="submit" aria-label="Search">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
-                  </svg></button>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+              <div id="search-info" class="search-info">
+                A traditional library catalog that searches both RISD and the Providence Athenaeum. Mostly print collections (books, magazines), DVDs, and RISD eBooks.
+              </div>
+            </div>
+            <div class="tab-content" id="discovery">
+              <form action="https://0-research-ebsco-com.librarycat.risd.edu/c/ing2w3/search/results?" method="get" target="_blank">
+                <input type="text" id="discovery-input" name="q" placeholder="Search almost everything">
+                <button type="submit" aria-label="Search">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+              <div id="search-info" class="search-info">
+                Fleet Search aggregates results from many places at once: the library catalog, <a style="color:white; text-decoration:underline" href="https://risd.libguides.com/az.php">databases</a>, plus materials we don't own that can be requested. </div>
+              </div>
+              <div class="tab-content" id="digitalcommons">
+                <form action="https://digitalcommons.risd.edu/do/search/" method="GET" target="_blank">
+                  <input type="text" id="dc-input" name="q" placeholder="Search the institutional repository">
+                  <button type="submit" aria-label="Search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
                 </form>
                 <div id="search-info" class="search-info">
-                  A traditional library catalog that searches both RISD and the Providence Athenaeum. Mostly print collections (books, magazines), DVDs, and RISD eBooks.
+                  Digital Commons is an institutional repository where the scholarly and creative output of RISD is preserved.
                 </div>
               </div>
-              <div class="tab-content" id="discovery">
-                <form action="https://0-research-ebsco-com.librarycat.risd.edu/c/ing2w3/search/results?" method="get" target="_blank">
-                  <input type="text" id="discovery-input" name="q" placeholder="Search almost everything">
-                  <button type="submit" aria-label="Search">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
-                    </svg></button>
-                  </form>
-                  <div id="search-info" class="search-info">
-                    Fleet Search aggregates results from many places at once: the library catalog, <a style="color:white; text-decoration:underline" href="https://risd.libguides.com/az.php">databases</a>, plus materials we don't own that can be requested. </div>
-                  </div>
-                  <div class="tab-content" id="digitalcommons">
-                    <form action="https://digitalcommons.risd.edu/do/search/" method="GET" target="_blank">
-                      <input type="text" id="dc-input" name="q" placeholder="Search the institutional repository">
-                      <button type="submit" aria-label="Search">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
-                        </svg></button>
-                      </form>
-                      <div id="search-info" class="search-info">
-                        Digital Commons is an institutional repository where the scholarly and creative output of RISD is preserved.
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </div>
+          </div>
           <div class="col-md-4" style="float: right;"> <!-- featured image -->
             <div class="featured-image">
               <a href="https://risd.libguides.com/Inside_the_Design_Science_Studio">
                 <img src="https://d2jv02qf7xgjwx.cloudfront.net/accounts/128622/images/designscience.png" alt="Inside the Design Science Studio"></a>
-             </div>
-            <div class="featured-link">
-              <a href="https://risd.libguides.com/Inside_the_Design_Science_Studio">Current Exhibit</a>
+              </div>
+              <div class="featured-link">
+                <a href="https://risd.libguides.com/Inside_the_Design_Science_Studio">Current Exhibit</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  <div class="container">
-      <div class="row">
+      <div class="container">
+        <div class="row">
           <!-- Begin Hours -->
-                <div class="col-md-6">
-                  <h2 class="h2-homepage">Today's Hours</h2>
-                  <div class="homepage-gray-box" id="libcal-widget">
-                    <script src="https://risd.libcal.com/js/hours_today.js"></script>
-                    <div id="s_lc_tdh_618_0"></div>
-                    <script>
-                      $(function () {
-                        var s_lc_tdh_618_0 = new $.LibCalTodayHours($("#s_lc_tdh_618_0"), { iid: 618, lid: 0 });
-                      });
-                    </script>
-                  </div>
-                </div><!--end hours-->
-        <!-- Begin explore boxes -->
-                <div class="col-md">
-                  <h2 class="h2-homepage">Explore</h2>
-                  <div class="layout-2x2">
-                    <div class="homepage-gray-box">
-                      <a href="https://risd.libguides.com/new">New Books & DVDs</a>
-                      <p>Browse items recently added to the library's circulating collections</p>
-                    </div>
-                    <div class="homepage-gray-box">
-                      <a href="https://digitalcommons.risd.edu/studentnewspapers_collection/">Student Newspapers</a>
-                      <p>RISD Archives' collection of historic student publications, recently digitized</p>
-                    </div>
-                    <div class="homepage-gray-box">
-                      <a href="https://risd.libguides.com/loeb">The Loeb Collection</a>
-                      <p>3d models, geometric silkscreens, and other Design Scient materials </p>
-                    </div>
-                    <div class="homepage-gray-box">
-                      <a href="https://risd.libguides.com/az.php">Databases A-Z</a>
-                      <p>Our full list of databases and online resources, searchable by title, topic, and format</p>
-                    </div>
-                    <div class="homepage-gray-box">
-                      <a href="https://risd.libguides.com/new">Link</a>
-                      <p>Browse items recently added to the library's circulating collections</p>
-                    </div>
-                    <div class="homepage-gray-box">
-                      <a href="https://risd.libguides.com/new">Link</a>
-                      <p>Browse items recently added to the library's circulating collections</p>
-                    </div>
-                  </div>
-                </div>
+          <div class="col-md-6">
+            <h2 class="h2-homepage">Today's Hours</h2>
+            <div class="homepage-gray-box" id="libcal-widget">
+              <script src="https://risd.libcal.com/js/hours_today.js"></script>
+              <div id="s_lc_tdh_618_0"></div>
+              <script>
+                $(function () {
+                  var s_lc_tdh_618_0 = new $.LibCalTodayHours($("#s_lc_tdh_618_0"), { iid: 618, lid: 0 });
+                });
+              </script>
+            </div>
+          </div><!--end hours-->
+          <!-- Begin explore boxes -->
+          <div class="col-md">
+            <h2 class="h2-homepage">Explore</h2>
+            <div class="layout-2x2">
+              <div class="homepage-gray-box">
+                <a href="https://risd.libguides.com/new">New Books & DVDs</a>
+                <p>Browse items recently added to the library's circulating collections</p>
               </div>
-            </div>     
-          <!-- BEGIN: Custom Footer -->
-          {{public_footer}}
-          <!-- END: Custom Footer -->       
-          </body>
-          
-          
+              <div class="homepage-gray-box">
+                <a href="https://digitalcommons.risd.edu/studentnewspapers_collection/">Student Newspapers</a>
+                <p>RISD Archives' collection of historic student publications, recently digitized</p>
+              </div>
+              <div class="homepage-gray-box">
+                <a href="https://risd.libguides.com/loeb">The Loeb Collection</a>
+                <p>3d models, geometric silkscreens, and other Design Scient materials </p>
+              </div>
+              <div class="homepage-gray-box">
+                <a href="https://risd.libguides.com/az.php">Databases A-Z</a>
+                <p>Our full list of databases and online resources, searchable by title, topic, and format</p>
+              </div>
+              <div class="homepage-gray-box">
+                <a href="https://risd.libguides.com/new">Link</a>
+                <p>Browse items recently added to the library's circulating collections</p>
+              </div>
+              <div class="homepage-gray-box">
+                <a href="https://risd.libguides.com/new">Link</a>
+                <p>Browse items recently added to the library's circulating collections</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>     
+      <!-- BEGIN: Custom Footer -->
+      {{public_footer}}
+      <!-- END: Custom Footer -->       
+    </body>
+    
+    

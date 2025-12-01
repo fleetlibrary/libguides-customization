@@ -191,7 +191,7 @@ a:hover, a:focus, a:visited:hover {
     align-items: center;
     list-style: none;
     padding: 0;
-    gap: 1.5rem;
+    gap: 2.5rem;
     margin-bottom: 2px;
 }
 
@@ -457,6 +457,32 @@ footer ul {
     padding-left: 0;
 }
 
+/*----FOOTER SEARCH BOX----*/
+
+#footer-search form {
+    margin-top: 20px;
+    padding: 10px 0px;
+    display: flex;
+}
+
+#footer-search input.s-lg-form-control {
+    width: 160px; /* this is also set in widget embed script*/
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0px 0px 0px 10px;
+
+}
+
+#footer-search button {
+    color: #ffffff !important;
+    background-color: var(--color-purple);
+    border: none;
+    border-radius: 0;
+    padding: 0px 10px;
+}
+
+
+
 /* lg footer */
 .s-lib-footer {
     margin-top: 15px;
@@ -663,14 +689,14 @@ h1#s-lib-public-header-title {
 
 /* tabbed box */
 
-.nav-tabs>li {
+.s-lib-box-content .nav-tabs>li {
     border: 1px solid var(--color-dark-gray);
     background-color: var(--color-gray);
     margin: 2px 5px 0px 0px;
     border-bottom: none;
 }
 
-.nav-tabs>li>a{
+.s-lib-box-content .nav-tabs>li>a{
     border-radius: 0px;
 }
 
@@ -732,6 +758,8 @@ input#s-lg-guide-search-terms {
 #s-lg-guide-tabs .nav-tabs>li>a,
 #s-lg-guide-tabs .nav-pills>li>a {
     border: 1px solid var(--tab-borders);
+}
+#s-lg-guide-tabs .nav-pills>li>a {
     border-left: 2px solid var(--color-black);
 }
 
@@ -778,6 +806,7 @@ a.s-lg-tab-top-link.pull-left {
 .s-lg-gtitle .bold,
 #s-lib-bc-list li,
 .s-lg-bold a, 
+#s-lg-guide-header-tags a,
 #s-lg-guide-tabs .nav-pills > li > a,
 #s-lg-guide-tabs .nav-tabs > li > a,
 a.s-lg-tab-top-link {
