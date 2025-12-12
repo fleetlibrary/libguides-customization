@@ -1,6 +1,26 @@
+// general tracking stuff
+
+springSpace.Common = springSpace.Common || {};
+springSpace.Common.constant = { PROCESSING: { ACTION_DISPLAY_POLL: 159 } };
+springSpace.Common.baseURL = "//lgapi-us.libapps.com'/";
+springSpace.Common.apiLoad = true;
+
+
+var springStats = springStats || {};
+springStats.saConfig = springStats.saConfig || {
+  site_id: 815,
+  tracking_parameters: { "_st_site_id": 815 },
+  tracking_server_host: "libguides-proc.springyaws.com"
+};
+
+springSpace.Common = springSpace.Common || {};
+springSpace.Common.constant = { PROCESSING: { ACTION_DISPLAY_POLL: 159 } };
+springSpace.Common.baseURL = "//lgapi-us.libapps.com'/";
+springSpace.Common.apiLoad = true;
+
 // Header menu button toggle
 
-(function(){
+(function () {
   function setupToggle(buttonId, menuId) {
     const btn = document.getElementById(buttonId);
     const menu = document.getElementById(menuId);
@@ -8,7 +28,7 @@
       console.warn('setupToggle: missing element', { buttonId, menuId, btn, menu });
       return;
     }
-    
+
     function open() {
       console.debug('open menu', menuId);
       btn.setAttribute('aria-expanded', 'true');
@@ -21,18 +41,18 @@
       menu.setAttribute('hidden', '');
       menu.classList.remove('open');
     }
-    
+
     btn.addEventListener('click', function (e) {
       const expanded = btn.getAttribute('aria-expanded') === 'true';
       if (expanded) close(); else open();
     });
-    
+
     document.addEventListener('click', function (e) {
       if (!menu.classList.contains('open')) return;
       if (btn.contains(e.target) || menu.contains(e.target)) return;
       close();
     });
-    
+
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && menu.classList.contains('open')) {
         close();
@@ -40,12 +60,12 @@
       }
     });
   }
-  
+
   function init() {
     setupToggle('menu-toggle', 'menu-list');
     setupToggle('mobile-toggle', 'mobile-menu-list');
   }
-  
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
@@ -70,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (content) content.classList.add('active');
     });
   });
-});    
+});
 
 // LibCal widgets
 // Populate live hours
@@ -80,13 +100,13 @@ function getData() {
     method: 'GET',
     mode: 'cors',
   })
-  .then(response => response.json())
-  .then(data => {
-    buildTable(data);
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  });
+    .then(response => response.json())
+    .then(data => {
+      buildTable(data);
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
 }
 
 getData();
@@ -96,7 +116,7 @@ function getToday() {
   var dd = today.getDate();
   var mm = today.getMonth() + 1;
   var yyyy = today.getFullYear();
-  if (dd < 10) { 
+  if (dd < 10) {
     dd = '0' + dd
   }
   if (mm < 10) {
@@ -106,7 +126,7 @@ function getToday() {
 }
 function buildTable(data) {
   let tr = "";
-  let loc = document.querySelector('table.hours')?.id == "vmrc" ? 2 : document.querySelector('table.hours')?.id == "special" ? 3 : document.querySelector('table.hours')?.id == "circ" ? 1  : 'all';
+  let loc = document.querySelector('table.hours')?.id == "vmrc" ? 2 : document.querySelector('table.hours')?.id == "special" ? 3 : document.querySelector('table.hours')?.id == "circ" ? 1 : 'all';
   getToday();
   if (loc == 'all') {
     tr = "";
@@ -134,11 +154,11 @@ function buildTable(data) {
 var springStats = springStats || {};
 springStats.saConfig = springStats.saConfig || {
   site_id: 815,
-  tracking_parameters: {"_st_site_id":815},
+  tracking_parameters: { "_st_site_id": 815 },
   tracking_server_host: "libguides-proc.springyaws.com"
 };
 
 springSpace.Common = springSpace.Common || {};
-springSpace.Common.constant = {PROCESSING: {ACTION_DISPLAY_POLL: 159 }};
+springSpace.Common.constant = { PROCESSING: { ACTION_DISPLAY_POLL: 159 } };
 springSpace.Common.baseURL = "//lgapi-us.libapps.com'/";
 springSpace.Common.apiLoad = true;

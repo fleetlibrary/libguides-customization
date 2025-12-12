@@ -49,6 +49,7 @@ body {
     flex: 1 1 calc(100% - 20px);
     flex-wrap: wrap;
     gap: 20px;
+    margin-bottom: 30px;
 }
 
 .layout-2x2 .homepage-gray-box {
@@ -424,26 +425,31 @@ h2.s-lib-box-title {
     box-shadow: none !important;
 }
 
-/*----FOOTER SEARCH BOX----*/
+/*----------GALLERY WIDGET FOR HOMEPAGE----------*/
 
-#footer-search form {
-    margin-top: 20px;
-    padding: 10px 0px;
-    display: flex;
-}
-
-#footer-search input.s-lg-form-control {
-    width: 160px;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0px 0px 0px 10px;
-    
-}
-
-#footer-search button {
-    color: #ffffff !important;
-    background-color: var(--color-purple);
+#s-lg-widget-1764625989576 .s-lib-box {
+    background-color: transparent !important;
     border: none;
-    border-radius: 0;
-    padding: 0px 10px;
+    box-shadow: none;
+}
+
+#s-lg-widget-1764625989576 .s-lib-box-title,
+#s-lg-widget-1764625989576 .s-lib-cpane-caption,
+#s-lg-widget-1764625989576 .slick_play_pause,
+#s-lg-widget-1764625989576 .slick-arrow {
+    display: none !important;
+}
+
+#s-lg-widget-1764625989576 .s-lib-box-content {
+    padding: 0;
+}
+
+#s-lg-widget-1764625989576 .slick-dots li button:before {
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 12px;
+}
+
+#s-lg-widget-1764625989576 .slick-dots li.slick-active button:before {
+    color: #000000;
 }
