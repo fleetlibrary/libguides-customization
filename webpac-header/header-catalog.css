@@ -1,5 +1,6 @@
 /* CATALOG STYLES */
 
+
 :root {
     --color-gray: #F5F5F3;
     --color-dark-gray: #b6b6b6;
@@ -165,7 +166,6 @@ a:hover, a:focus, a:visited:hover {
     padding: 0;
     margin: 0;
     line-height: 0;
-    gap: 1.5rem;
 }
 
 .nav-li {
@@ -185,19 +185,11 @@ a:hover, a:focus, a:visited:hover {
 }
 
 .nav-ul .logo img {
-/* Menus */
-
-
-.nav-ul #lockup a {
-    padding-left: 0 !important;
-}
-
-.nav-ul #lockup img {
     max-height: 60px;
     width: auto;
 }
 
-.nav-ul #lockup {
+.nav-ul #title {
     margin-right: auto !important; /* float everything else to the right */
 }
 
@@ -213,8 +205,8 @@ a:hover, a:focus, a:visited:hover {
     line-height: 25px;
 }
 
-.header a:hover,
-.header a:focus {
+.header #login:hover,
+.header #login:focus {
     background: var(--color-blue);
     text-decoration: none;
 }
@@ -228,8 +220,8 @@ a:hover, a:focus, a:visited:hover {
 }
 
 /* remove blue hover from logos */
-#lockup a:hover,
-#lockup a:focus {
+.logo a:hover,
+.logo a:focus {
     background: transparent;
 }
 
@@ -313,21 +305,9 @@ a:hover, a:focus, a:visited:hover {
     display: block;
 }
 
-
-#more-menu .menu-ul li a {
-    display: block;
-    padding: 10px 16px;
-    color: var(--color-black);
-    text-decoration: none;
-/* Position menus relative to their li container so right:0 aligns to the toggle 
+/* Position menus relative to their li container so right:0 aligns to the toggle */
 #more-menu, #mobile-menu {
-    position: relative; */
-}
-
-#more-menu .menu-ul li a:hover {
-    background-color: var(--color-blue);
-    color: var(--color-white);
-    text-decoration: none;
+    position: relative;
 }
 
 /* Prevent menus from overflowing the viewport on very small screens */
@@ -347,12 +327,15 @@ a:hover, a:focus, a:visited:hover {
 
 @media screen and (max-width: 1080px){
     /* Hide all top-level nav items except the logo */
-    
     .nav-ul > li {
         display: none;
     }
     
-    .nav-ul > #lockup {
+    .nav-ul > .logo {
+        display: list-item;
+    }
+    
+    .nav-ul > .logo {
         display: list-item;
     }
     

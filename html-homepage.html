@@ -1,15 +1,12 @@
 <body>
-  
   <!-- BEGIN: Page Header -->
   {{public_header}}
   <!-- END: Page Header -->
-  
-  <!-- BEGIN: Search -->
-  <div class="libguides--blue-box">
-    <div class="container" id="homepage">
+  <div class="homepage-blue-box">
+    <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <div class="search-tabs">
+          <div class="search-tabs"> <!--Tabbed search box-->
             <h1 class="search-title">Search the Collections</h1>
             <div class="tab-buttons">
               <button class="tab-btn active" data-tab="catalog">Library Catalog</button>
@@ -18,295 +15,96 @@
             </div>
             <div class="tab-content active" id="catalog">
               <form action="https://librarycat.risd.edu/search/X?" method="get" target="_blank">
-                <input type="text" name="SEARCH" placeholder="Search RISD + Athenaeum collections">
+                <input type="text" id="catalog-input" name="SEARCH" placeholder="Search RISD + Athenaeum collections">
                 <button type="submit" aria-label="Search">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
-                  </svg></button>
-                </form>
-                <div id="search-info" class="search-info">
-                  Search physical collections across RISD and the Providence Athenaeum. Look for
-                  a "RISD" or "ATH" location to determine where each item can be found.
-                </div>
-                </div>
-                <div class="tab-content" id="discovery">
-                  <form action="https://0-research-ebsco-com.librarycat.risd.edu/c/ing2w3/search/results?" method="get" target="_blank">
-                    <input type="text" name="q" placeholder="Search almost everything">
-                    <button type="submit" aria-label="Search">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
-                      </svg></button>
-                    </form>
-                    <div id="search-info" class="search-info">
-                      Fleet Search enables searching across many resources at once.
-                      It includes results from the library catalog and most of our databases, as well as materials
-                      you can request from other libraries. </div>
-                    </div>
-                
-                  <div class="tab-content" id="digitalcommons">
-                    <form action="https://digitalcommons.risd.edu/do/search/" method="GET" target="_blank">
-                      <input type="text" name="q" placeholder="Search the institutional repository">
-                      <button type="submit" aria-label="Search">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
-                        </svg></button>
-                      </form>
-                      <div id="search-info" class="search-info">
-                        Digital Commons is RISD's institutional repository. (etc)
-                      </div>
-                    </div>
-                  </div>
-                </div><div class="col-md-4" style="float: right;">
-                  <!--div class="featured-image"><img src="http://placehold.co/400x400" alt="Placeholder image"></div>-->
-                  <div class="featured-image"><a href="https://risd.libguides.com/Inside_the_Design_Science_Studio">
-                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/accounts/128622/images/designscience.png" alt="Inside the Design Science Studio"></a></div>
-                    <div class="featured-link"><a href="https://risd.libguides.com/Inside_the_Design_Science_Studio">Current Exhibit</a></div>
-                  </div>
-                  
-                </div>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+              <div id="search-info" class="search-info">
+                Searches physical collections at both RISD and the Providence Athenaeum: books, journals, DVDs, and more (plus RISD eBooks).
               </div>
             </div>
-            <!-- END: Search -->
-
-<div id="libchat_da9e0ec52be2e6d9911a480df7ace7bf3ba6824e232390bba8da49e4c10f17b7"></div>            
-           
-<!-- BEGIN: content -->
-            <div class="container" id="homepage">
-              <div class="row">
-                <!-- BEGIN: Boxes -->
-                <div class="col-md-6">
-                  <h2>Explore</h2>
-                  <div class="layout-2x2">
-                    <div class="libguides--gray-box">
-                      <a href="#">New Books & DVDs</a>
-                      <p>Lorem ipsum dolor sit amet sit der</p>
-                    </div>
-                    <div class="libguides--gray-box">
-                      <a href="#">More Libraries</a>
-                      <p>Lorem ipsum dolor sit amet sit der</p>
-                    </div>
-                    <div class="libguides--gray-box">
-                      <a href="#">The Loeb Collection</a>
-                      <p>Lorem ipsum dolor sit amet sit der</p>
-                    </div>
-                    <div class="libguides--gray-box">
-                      <a href="#">Digital Commons</a>
-                      <p>Lorem ipsum dolor sit amet sit der</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Begin Schedule -->
-                <div class="col-md-6">
-                  <h2>Today's Hours</h2>
-                  <div class="libguides--gray-box">
-                    <script src="https://risd.libcal.com/js/hours_today.js"></script>
-                    <div id="s_lc_tdh_618_0"></div>
-                    <script>
-                      $(function () {
-                        var s_lc_tdh_618_0 = new $.LibCalTodayHours($("#s_lc_tdh_618_0"), { iid: 618, lid: 0 });
-                      });
-                    </script>
-                  </div><!-- end .libguides--gray-box -->
+            <div class="tab-content" id="discovery">
+              <form action="https://0-research-ebsco-com.librarycat.risd.edu/c/ing2w3/search/results?" method="get" target="_blank">
+                <input type="text" id="discovery-input" name="q" placeholder="Search almost everything">
+                <button type="submit" aria-label="Search">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+              <div id="search-info" class="search-info">
+                Fleet Search brings together sources from many places at once: article databases, streaming films, eBooks, the library catalog, plus materials that can be requested through Interlibrary Loan.
+              </div>
+            </div>
+            <div class="tab-content" id="digitalcommons">
+                <form action="https://digitalcommons.risd.edu/do/search/" method="GET" target="_blank">
+                  <input type="text" id="dc-input" name="q" placeholder="Search the institutional repository">
+                  <button type="submit" aria-label="Search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+                <div id="search-info" class="search-info">
+                  Digital Commons is RISD's institutional repository - where we host our own materials: digital thesis books, digitized materials from RISD Archives and Special Collections, and much more.
                 </div>
               </div>
-            </div><!-- end .container-->
-            <script type="text/javascript" src="//lgapi-us.libapps.com/web/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-            <script type="text/javascript" src="//lgapi-us.libapps.com/web/js3.19.4/springshare.public.min.js"></script>
-            <script type="text/javascript" src="//lgapi-us.libapps.com/web/js3.19.4/springshare.common.min.js"></script>
-            <script type="text/javascript" src="//lgapi-us.libapps.com/web/js3.19.4/common/springspace_sui_helptip.js"></script>
-            <link rel="stylesheet" href="//lgapi-us.libapps.com/web/jquery/css/jquery-ui.min.css?2691"/>
-            <link rel="stylesheet" href="//lgapi-us.libapps.com/web/bootstrap/3.4.1/css/bootstrap.min.css"/>
-            <link rel="stylesheet" href="//lgapi-us.libapps.com/web/css3.19.4/springshare.public.min.css"/>
-            <link rel="stylesheet" href="//lgapi-us.libapps.com/web/css3.19.4/springshare.common.min.css"/>
-            <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-            <link href="//lgapi-us.libapps.com/web/css3.19.4/common/springspace_sui_helptip.css" rel="stylesheet">
-            
-            <script>
-              var springStats = springStats || {};
-              springStats.saConfig = springStats.saConfig || {
-                site_id: 815,
-                tracking_parameters: {"_st_site_id":815},
-                tracking_server_host: "libguides-proc.springyaws.com"
-              };
-            </script>
-            
-            
-            <script>
-              springSpace.Common = springSpace.Common || {};
-              springSpace.Common.constant = {PROCESSING: {ACTION_DISPLAY_POLL: 159 }};
-              springSpace.Common.baseURL = "//lgapi-us.libapps.com'/";
-              springSpace.Common.apiLoad = true;
-            </script>
-            
-            
-            <!-- END: content -->
-            
-            <!-- BEGIN: Custom Footer -->
-            {{public_footer}}
-            <!-- END: Custom Footer -->
-            
-            <!-- BEGIN: Library Search Script -->
-            <script>
-              var springStats = springStats || {};
-              springStats.saConfig = springStats.saConfig || {
-                site_id: 815,
-                tracking_parameters: { "_st_site_id": 815 },
-                tracking_server_host: "libguides-proc.springyaws.com"
-              };
-            </script>
-            
-            <script>
-              springSpace.Common = springSpace.Common || {};
-              springSpace.Common.constant = { PROCESSING: { ACTION_DISPLAY_POLL: 159 } };
-              springSpace.Common.baseURL = "//lgapi-us.libapps.com'/";
-              springSpace.Common.apiLoad = true;
-            </script>
-            
-            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://lgapi-us.libapps.com/widgets.php?site_id=815&widget_type=8&output_format=1&widget_title=Homepage+Gallery&widget_height=250&widget_width=100%25&widget_embed_type=1&guide_id=1480758&box_id=34703069&map_id=40815624&content_only=0&include_jquery=0&config_id=1753392827011"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "s-lg-widget-script-1753392827011");</script>
-            <!-- END: Library Search Script-->
-            
-            <!-- BEGIN: Mobile Navigation Menu -->
-            <script>
-              (function () {
-                const MOBILE_BREAKPOINT = 924;
-                
-                const nav = document.querySelector('.header-nav');
-                if (!nav) return;
-                
-                const logoLi = nav.querySelector(':scope > .logo-li');
-                const moreLi = nav.querySelector(':scope > .header-more');
-                if (!moreLi) return;
-                
-                const moreBtn = moreLi.querySelector('.nav-btn');
-                let submenu = moreLi.querySelector(':scope > .header-menu');
-                
-                // If submenu is missing for any reason, create it.
-                if (!submenu) {
-                  submenu = document.createElement('ul');
-                  submenu.className = 'header-menu';
-                  moreLi.appendChild(submenu);
-                }
-                
-                // Collect original items to preserve/restore order
-                const originalTopLis = Array.from(nav.querySelectorAll(':scope > li.menu-li'));
-                const originalSubmenuLis = Array.from(submenu.children);
-                
-                // Accessibility attributes for the toggle
-                moreBtn.setAttribute('role', 'button');
-                moreBtn.setAttribute('aria-haspopup', 'true');
-                moreBtn.setAttribute('aria-expanded', 'false');
-                moreBtn.setAttribute('aria-controls', 'header-menu-mobile');
-                submenu.id = 'header-menu-mobile';
-                
-                let isCollapsed = false;
-                
-                function collapseToMobile() {
-                  if (isCollapsed) return;
-                  // Move all top-level menu items into the submenu (after existing submenu items)
-                  originalTopLis.forEach(li => submenu.appendChild(li));
-                  isCollapsed = true;
-                }
-                
-                function expandToDesktop() {
-                  if (!isCollapsed) return;
-                  // Move the moved items back to the top level, just before the More li, in original order
-                  originalTopLis.forEach(li => nav.insertBefore(li, moreLi));
-                  // Ensure original submenu items remain (they never left), so nothing else to do here
-                  closeMenu();
-                  isCollapsed = false;
-                }
-                
-                function checkLayout() {
-                  if (window.innerWidth < MOBILE_BREAKPOINT) {
-                    collapseToMobile();
-                    moreBtn.innerHTML = `
-      <span class="menu-label">Menu</span>
-      <div class="cta-menu">
-        <div id="main-hamburger-menu" class="cta-menu__wrapper closed">
-          <div class="cta-menu__icon">
-            <span></span>
           </div>
         </div>
+        <div class="col-md-4" id="gallery-widget" style="float: right;">
+            <script  src="//lgapi-us.libapps.com/web/js/sa.min.js?3116"></script>
+            <script>springshare_widget_config_1764625989576 = { path: 'boxes/35319574', link_text: 'Content Box' };</script><div id="s-lg-widget-1764625989576"></div><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://lgapi-us.libapps.com/widgets.php?site_id=815&widget_type=8&output_format=1&widget_title=Featured+Images&widget_height=410&widget_width=100%25&widget_embed_type=1&guide_id=1504735&box_id=35319574&map_id=41568190&content_only=0&include_jquery=0&config_id=1764625989576";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","s-lg-widget-script-1764625989576");</script>
+        </div>
       </div>
-    `;
-                  } else {
-                    expandToDesktop();
-                    moreBtn.innerHTML = 'More ☰';  // restore desktop label
-                  }
-                }
-                
-                function openMenu() {
-                  moreLi.classList.add('is-open');
-                  moreBtn.setAttribute('aria-expanded', 'true');
-                }
-                
-                function closeMenu() {
-                  moreLi.classList.remove('is-open');
-                  moreBtn.setAttribute('aria-expanded', 'false');
-                }
-                
-                function toggleMenu(e) {
-                  e.preventDefault();
-                  if (moreLi.classList.contains('is-open')) {
-                    closeMenu();
-                  } else {
-                    openMenu();
-                  }
-                }
-                
-                // Close on outside click (mobile)
-                function onDocumentClick(e) {
-                  if (!isCollapsed) return; // only relevant on mobile
-                  if (!moreLi.contains(e.target)) {
-                    closeMenu();
-                  }
-                }
-                
-                // Close on Escape
-                function onKeyDown(e) {
-                  if (e.key === 'Escape') {
-                    closeMenu();
-                    moreBtn.focus();
-                  }
-                }
-                
-                // Basic, safe debounce for resize
-                let resizeTimer = null;
-                function onResize() {
-                  clearTimeout(resizeTimer);
-                  resizeTimer = setTimeout(checkLayout, 120);
-                }
-                
-                // Events
-                moreBtn.addEventListener('click', toggleMenu);
-                document.addEventListener('click', onDocumentClick);
-                document.addEventListener('keydown', onKeyDown);
-                window.addEventListener('resize', onResize);
-                
-                // Init
-                checkLayout();
-              })();
-            </script>
-            <!-- END: Mobile Navigation Menu -->
-
-            <!--tab switching for main search widget-->
-          <script>
-            // Tab switching for search-tabs widget
-            document.addEventListener('DOMContentLoaded', function () {
-              const tabButtons = document.querySelectorAll('.search-tabs .tab-btn');
-              const tabContents = document.querySelectorAll('.search-tabs .tab-content');
-              tabButtons.forEach(btn => {
-                btn.addEventListener('click', function () {
-                  tabButtons.forEach(b => b.classList.remove('active'));
-                  tabContents.forEach(tc => tc.classList.remove('active'));
-                  this.classList.add('active');
-                  const tabId = this.getAttribute('data-tab');
-                  const content = document.getElementById(tabId);
-                  if (content) content.classList.add('active');
+    </div>
+  </div>
+      <div class="container">
+        <div class="row">
+          <!-- Begin Hours -->
+          <div class="col-md-6">
+            <h2 class="h2-homepage">Today's Hours</h2>
+            <div class="homepage-gray-box" id="libcal-widget">
+              <script src="https://risd.libcal.com/js/hours_today.js"></script>
+              <div id="s_lc_tdh_618_0"></div>
+              <script>
+                $(function () {
+                  var s_lc_tdh_618_0 = new $.LibCalTodayHours($("#s_lc_tdh_618_0"), { iid: 618, lid: 0 });
                 });
-              });
-            });
-          </script>
-<!--chat script-->
-<script src="https://risd.libanswers.com/load_chat.php?hash=da9e0ec52be2e6d9911a480df7ace7bf3ba6824e232390bba8da49e4c10f17b7"></script>
-          </body>
+              </script>
+            </div>
+          </div><!--end hours-->
+          <!-- Begin explore boxes -->
+          <div class="col-md">
+            <h2 class="h2-homepage">Explore</h2>
+            <div class="layout-2x2">
+              <div class="homepage-gray-box">
+                <a href="https://risd.libguides.com/contest">New Books</a>
+                <p>Browse items recently added to the library's circulating collections</p>
+              </div>
+              <div class="homepage-gray-box">
+                <a href="https://risd.libguides.com/faculty">Resources for Faculty</a>
+                <p>Whether you're seasoned or brand new, you'll find something here</p>
+              </div>
+              <div class="homepage-gray-box">
+                <a href="https://risd.libguides.com/az.php">Databases A-Z</a>
+                <p>Our full list of databases and online resources, searchable by title, topic, and format</p>
+              </div>
+              <div class="homepage-gray-box">
+                <a href="https://risd.libguides.com/thesesbydepartment">Graduate Theses</a>
+                <p>Explore digital and physical master's theses from RISD graduates</p>
+              </div>
+              <div class="homepage-gray-box">
+                <a href="https://risd.libguides.com/exhibits">Current Exhibits</a>
+                <p>See what's on display at the library</p>
+              </div>
+              <div class="homepage-gray-box">
+                <a href="https://risd.libguides.com/events-exhibits/unbound">Unbound</a>
+                <p>UNBOUND Art Book Fair is coming in April</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>     
+      <!-- BEGIN: Custom Footer -->
+      {{public_footer}}
+      <!-- END: Custom Footer -->       
+    </body>
+    
+    

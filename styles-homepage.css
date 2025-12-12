@@ -1,6 +1,11 @@
-/* STYLES FOR HOMEPAGE AND WEBSITE GROUP GUIDES */
+/* STYLES FOR HOMEPAGE AND WEBSITE GROUP */
 
-/* Dependent on system-wide stylesheet for fonts, colors etc */
+:root {
+    --banner-color: #2454FF; /* change the big box behind search widget & featured image */
+    --ribbon-color: #edff67; /* change color of alert ribbon (still to be coded in) */
+}
+
+/*---------------------------------HOMEPAGE----------------------------------*/
 
 h1.search-title {
     color: var(--color-white);
@@ -10,24 +15,32 @@ h1.search-title {
     margin-top: 0;
 }
 
-/* (changed from .container) */
-#homepage {
-    margin: 80px auto;
+h2.h2-homepage {
+    margin-bottom: 20px;
 }
 
-/* Homepage Boxes */
+body {
+    font-size: 14px;
+}
 
-.libguides--gray-box {
+.footer-risd { /* footer styles are in libguides-wide css, this is for website only */
+    margin-top: 30px;
+}
+
+/* Boxes */
+
+.homepage-gray-box {
     background-color: var(--color-gray);
-    padding: 24px 40px;
+    padding: 15px 30px;
 }
 
-.libguides--blue-box {
-    background-color: var(--color-blue);
+.homepage-blue-box {
+    background-color: var(--banner-color);
     padding: 80px 0;
+    margin-bottom: 30px;
 }
 
-.libguides--blue-box .container {
+.homepage-blue-box .container {
     margin: 0 auto;
 }
 
@@ -36,31 +49,41 @@ h1.search-title {
     flex: 1 1 calc(100% - 20px);
     flex-wrap: wrap;
     gap: 20px;
+    margin-bottom: 30px;
 }
 
-.layout-2x2 .libguides--gray-box {
+.layout-2x2 .homepage-gray-box {
     width: calc(50% - 10px);
 }
 
-/* made these more specific than .row because it was throwing off other pages, is this meant just for gray boxes or further into the style? */
-.libguides--gray-box a {
+.homepage-gray-box a {
     color: var(--color-black);
     font-size: 16px;
 }
 
-.libguides--gray-box a:hover {
+.homepage-gray-box p {
+    color: var(--color-black);
+    font-size: 14px;
+}
+
+.homepage-gray-box a:hover {
     color: var(--color-blue);
     text-decoration: none;
 }
 
 .layout-2x2 a {
     display: inline-block;
-    padding-bottom: 4px;
+    padding-bottom: 2px;
     border-bottom: 2px solid var(--color-blue);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 /* Homepage hours ----- please look at these, I combined 2 different sections here */
+
+.s-lc-time,
+.s-lc-timetxt {
+    font-size: 14px;
+}
 
 button.s-lc-w-btn, .s-lc-w-today-view-all a {
     justify-content: space-between;
@@ -101,25 +124,27 @@ button.s-lc-w-btn:hover, .s-lc-w-today-view-all a:hover {
     color: var(--color-white);
 }
 
-.s-lc-w-today, .s-lc-w-name, .s-lc-w-department .s-lc-w-name, .s-lc-w-time {
-    padding: 32px 0 16px 0 !important;
-    padding-left: 0 !important;
+.s-lc-w-today-view-all {
+    display: flex;
+    justify-content: center;
+}
+
+/* .s-lc-w-today, 
+.s-lc-w-department */
+.s-lc-w-name, 
+.s-lc-w-time {
+    padding: 20px 0 10px 0;
+    /*    padding-left: 0 !important; */
 }
 
 td.s-lc-w-name {
     width: auto;
 }
 
-tr.s-lc-w-times.s-lc-w-location  {
-    display: none;
-}
-
-th.s-lc-w-head {
-    position: relative;
-}
 .s-lc-w-head {
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding-bottom: 20px;
 }
 
 .s-lc-w-head > span {
@@ -130,20 +155,17 @@ th.s-lc-w-head {
     font-weight: normal;
 }
 
-.s-lc-w-head > span.s-lc-w-head-pre {
+span.s-lc-w-head-pre,
+.s-lc-w-location > td {
     display: none;
 }
 
 tr.s-lc-w-times {
     border-bottom: 2px solid var(--color-black);
-    display: block;
     display: flex;
     gap: 10px;
     justify-content: space-between;
-}
-
-.s-lc-w-times {
-    border-bottom: 1px solid #ddd;
+    margin: 10px 0px;
 }
 
 tr.s-lc-w-times.s-lc-w-location {
@@ -155,7 +177,7 @@ tr.s-lc-w-times.s-lc-w-location {
 }
 
 .s-lc-w-today-view-all {
-    margin-top: 32px;
+    margin: 30px 0px 10px 0px;
 }
 
 .s-lc-w-next {
@@ -188,10 +210,6 @@ tr.s-lc-w-times.s-lc-w-location {
     text-decoration: none;
 }
 
-.s-lc-w-today-view-all {
-    padding: 8px 5px;
-}
-
 .s-lc-w-today {
     border-spacing: 0;
     border-collapse: collapse;
@@ -219,26 +237,19 @@ tr.s-lc-w-times.s-lc-w-location {
     border: 0;
 }
 
-.s-lc-w-btn:active,
-.s-lc-w-btn:hover {
-    color: #333;
-    background-color: #d4d4d4;
-    border-color: #8c8c8c;
-}
+
+/* tabbed search box */
 
 
-
-
-/* Homepage search */
 .search-tabs {
-    background-color: var(--color-blue);
+    background-color: var(--banner-color);
     margin: 0;
 }
 
 .tab-buttons {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .tab-btn {
@@ -258,51 +269,35 @@ tr.s-lc-w-times.s-lc-w-location {
     color: var(--color-blue);
 }
 
-.tab-content {
-  display: none;
+.search-tabs .tab-content {
+    display: none;
 }
 
-.tab-content.active {
-  display: block;
+.search-tabs .tab-content.active {
+    display: block;
 }
 
-.tab-content form {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.tab-content input[type="text"] {
-  flex: 1;
-}
-
-.tab-content button[type="submit"] {
-  cursor: pointer;
-}
-
-.search-info {
-    font-size: 14px;
-    padding: 0.75rem 1rem;
-    min-height: 2.2em;
-    color: var(--color-white);
-    background-color: transparent;
-}
-
-.search-tabs form {
+.search-tabs .tab-content form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
     background-color: var(--color-white);
+    
 }
 
-.search-tabs .tab-content form input[type="text"] {
+.search-tabs .tab-content input[type="text"] {
+    flex: 1;
     border: 0;
     font-family: var(--font-secondary);
     color: var(--color-blue);
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 100;
     padding: 10px 20px;
 }
 
-.tab-content button[type="submit"] {
-    padding: .5em 1em 0em 1em;
+.search-tabs .tab-content button[type="submit"] {
+    cursor: pointer;
+    padding: 10px 15px;
     background: var(--color-blue);
     color: var(--color-white);
     border: none;
@@ -311,7 +306,27 @@ tr.s-lc-w-times.s-lc-w-location {
     cursor: pointer;
 }
 
-/* Featured Homepage Content */
+.search-tabs .tab-content button i {
+    font-size: 20px;
+}
+
+.search-info {
+    font-size: 14px;
+    padding: 0.75rem 1rem;
+    min-height: 2.2em;
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
+
+@media (max-width: 992px) {
+    .search-info {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+/* featured image */
 
 .featured-image {
     text-align: center;
@@ -337,44 +352,104 @@ tr.s-lc-w-times.s-lc-w-location {
 }
 
 /* Images */
+
 .col-md-6 img, .col-md-4 img {
     max-width: 100%;
 }
 
-/* Box Styling to override system boxes */
-/* Colors and borders can be set in Group Look & Feel, or here */
-
-div#s-lg-side-nav-content {
-    margin-top: 0;
+@media (max-width: 576px) { 
+    h1.search-title {
+        font-size: 48px;
+    }
+    
+    #catalog-input,
+    #discovery-input,
+    #dc-input {
+        font-size: 16px;
+    }
+    
+    .layout-2x2 {
+        margin-bottom: 20px;
+    }
+    
+    .layout-2x2 .homepage-gray-box {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    
+    .layout-2x2 a {
+        margin-bottom: 16px;
+    }
+    
+    #libcal-widget {
+        padding: 10px;
+    }
+    
+    table.s-lc-w-today {
+        padding: 10px 0 10px 0 !important;
+    }
+    
+    .s-lc-w-head > span {
+        margin-top: 40px;
+        width: 100%;
+    }
 }
 
+
+/*---------------------------------STYLE OVERRIDES FOR WEBSITE GROUP----------------------------------*/
+
+
+#s-lib-bc,
+#s-lg-guide-header-search,
+#s-lib-footer-public {
+    display: none;
+}
+
+h1#s-lg-guide-name {
+    color: var(--color-blue) !important;
+}
+
+/* OVERRIDE TAB & BOX SETTINGS */
 h2.s-lib-box-title {
+    color: var(--color-black);
+    font-size: 26px !important;
     font-family: var(--font-secondary) !important;
-    font-size: 30px !important;
-    font-weight: 100 !important;
-    text-transform: none !important;
-    color: var(--color-blue); /* this can be set in look & feel */
+    text-transform: revert !important;
+    border-bottom: 2px solid black !important;
+    margin-bottom: 10px !important;
 }
 
-
-/* TRYING SOME THINGS OUT FOR THE WHOLE LIBAPPS */
-
-
-.container#s-lg-guide-header {
-    background-color: pink;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 80px;
-    padding-right: 80px;
-    width: auto;
+.s-lib-box, .s-lib-box-title {
+    border: none !important;
+    background-color: var(--color-white) !important;
+    box-shadow: none !important;
 }
 
-/* or: */
+/*----------GALLERY WIDGET FOR HOMEPAGE----------*/
 
-.container#s-lg-guide-header {
-    background-color: #f3f3f5;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-    width: 100%;
-    padding: 0px 40px;
+#s-lg-widget-1764625989576 .s-lib-box {
+    background-color: transparent !important;
+    border: none;
+    box-shadow: none;
+}
+
+#s-lg-widget-1764625989576 .s-lib-box-title,
+#s-lg-widget-1764625989576 .s-lib-cpane-caption,
+#s-lg-widget-1764625989576 .slick_play_pause,
+#s-lg-widget-1764625989576 .slick-arrow {
+    display: none !important;
+}
+
+#s-lg-widget-1764625989576 .s-lib-box-content {
+    padding: 0;
+}
+
+#s-lg-widget-1764625989576 .slick-dots li button:before {
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 12px;
+}
+
+#s-lg-widget-1764625989576 .slick-dots li.slick-active button:before {
+    color: #000000;
 }

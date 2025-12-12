@@ -1,18 +1,18 @@
 /************** System-Wide Styles **********/
 
 :root {
-    --color-gray: #F5F5F3;
-    --color-mid-gray: #e0e0DD;
-    --color-dark-gray: #b6b6b6;
-    --color-blue: #2454FF;
-    --color-white: #FFFFFF;
-    --color-black: #000;
-    --color-near-black: #444444;
-    --color-green: #00A95C;
-    --color-purple: #BE53F7;
-    --color-orange: #FF6C2F;
-    --color-gold: #B97000;
-    --color-pink: #E44C9A;
+    --gray: #F5F5F3;
+    --mid-gray: #e0e0DD;
+    --dark-gray: #b6b6b6;
+    --blue: #2454FF;
+    --white: #FFFFFF;
+    --black: #000;
+    --near-black: #444444;
+    --green: #00A95C;
+    --purple: #BE53F7;
+    --orange: #FF6C2F;
+    --gold: #B97000;
+    --pink: #E44C9A;
     
     
     
@@ -20,14 +20,14 @@
     
     --tab-color: #F5F5F3;
     --tab-borders: #c1c1c1;
-    --tab-active: var(--color-blue);
-    --subtab-border: var(--color-dark-gray);
+    --tab-active: var(--blue);
+    --subtab-border: var(--dark-gray);
     --subtab-text: black;;
-    --box-heading: var(--color-black);
-    --link: var(--color-blue);
+    --box-heading: var(--black);
+    --link: var(--blue);
     --link-hover: black;
     --guide-title: black;
-    --body-text: var(--color-near-black);
+    --body-text: var(--near-black);
     
     --font-primary: 'RISD Sans', Arial, Helvetica, sans-serif;
     --font-secondary: 'RISD Serif Complete', serif;
@@ -163,25 +163,25 @@ body {
 
 a, a:visited {
     font-family: inherit;
-    color: var(--color-blue);
+    color: var(--blue);
     text-decoration: none;
 }
 
 a:hover, a:focus, a:visited:hover {
-    color: var(--color-blue);
+    color: var(--blue);
     text-decoration: underline;
 }
 
 .nav .fa-external-link {
     font-size: 12px !important;
-    color: var(--color-black);
+    color: var(--black);
 }
 
 
-/*-----------------------------------------HEADER-----------------------------------------*/
+/*-----------------------------------------HEADER -----------------------------------------*/
 
 .header {
-    background-color: var(--color-white);
+    background-color: var(--white);
     width: 100%;
 }
 
@@ -211,19 +211,19 @@ a:hover, a:focus, a:visited:hover {
 
 .nav-li a {
     font-family: var(--font-primary);
-    color: var(--color-black);
+    color: var(--black);
     text-decoration: none;
     font-size: 16px;
 }
 
 .header li:hover,
 .header li:focus {
-    background: var(--color-blue);
+    background: var(--blue);
     text-decoration: none !important;
 }
 
 .nav-li:hover a  {
-    color: var(--color-white);
+    color: var(--white);
     text-decoration: none !important;
 }
 
@@ -243,7 +243,7 @@ a:hover, a:focus, a:visited:hover {
 }
 
 .nav-ul #more-menu:hover svg  {
-    color: var(--color-white) !important;
+    color: var(--white) !important;
 }
 
 
@@ -265,7 +265,7 @@ a:hover, a:focus, a:visited:hover {
     height: 24px;
     display: inline-block;
     vertical-align: middle;
-    color: var(--color-blue);
+    color: var(--blue);
 }
 
 .mobile-icon {
@@ -273,22 +273,22 @@ a:hover, a:focus, a:visited:hover {
     height: 24px;
     display: inline-block;
     vertical-align: middle;
-    color: var(--color-white);
+    color: var(--white);
 }
 
 /* Toggle desktop dropdown menu */
 #menu-toggle, #mobile-toggle {
     cursor: pointer;
     padding: 10px 14px;
-    background: var(--color-white);
+    background: var(--white);
     border: none;
     margin: 0;
 }
 
 #menu-toggle:hover, #menu-toggle:focus,
 #mobile-toggle:hover, #mobile-toggle:focus {
-    background: var(--color-blue);
-    color: var(--color-white);
+    background: var(--blue);
+    color: var(--white);
 }
 
 /* menu lists hidden by default, visible when open */
@@ -296,7 +296,7 @@ a:hover, a:focus, a:visited:hover {
     list-style: none !important;
     margin: 8px 0 0 0;
     padding: 0;
-    background: var(--color-white);
+    background: var(--white);
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     position: absolute;
     right: 0;
@@ -325,13 +325,13 @@ a:hover, a:focus, a:visited:hover {
 #more-menu .menu-ul li a {
     display: block;
     padding: 10px 16px;
-    color: var(--color-black);
+    color: var(--black);
     text-decoration: none;
 }
 
 #more-menu .menu-ul li a:hover {
-    background-color: var(--color-blue);
-    color: var(--color-white);
+    background-color: var(--blue);
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -367,8 +367,8 @@ a:hover, a:focus, a:visited:hover {
     #mobile-menu .mobile-menu-btn {
         cursor: pointer;
         padding: 10px 14px;
-        background: var(--color-blue);
-        color: var(--color-white);
+        background: var(--blue);
+        color: var(--white);
         border-radius: none;
     }
     
@@ -382,13 +382,13 @@ a:hover, a:focus, a:visited:hover {
     #mobile-menu .mobile-menu-list li a {
         display: block;
         padding: 10px 16px;
-        color: var(--color-black);
+        color: var(--black);
         text-decoration: none;
     }
     
     #mobile-menu .mobile-menu-list li a:hover {
-        background-color: var(--color-blue);
-        color: var(--color-white);
+        background-color: var(--blue);
+        color: var(--white);
         text-decoration: none;
     }
     
@@ -411,25 +411,25 @@ a:hover, a:focus, a:visited:hover {
 
 .footer-risd {
     padding: 40px;
-    background-color: var(--color-black);
+    background-color: var(--black);
     max-width: 100% !important;
     padding-left: 0px !important;
     padding-right: 0px !important;
 }
 
 .footer-risd, .footer-risd a {
-    color: var(--color-white);
+    color: var(--white);
     font-family: var(--font-primary);
     font-size: 14px;
 }
 
 .footer-risd a {
-    text-decoration: underline var(--color-white);
+    text-decoration: underline var(--white);
     text-underline-offset: 2px;
 }
 
 .footer-risd a:hover {
-    color: var(--color-white);
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -475,7 +475,7 @@ footer ul {
 
 #footer-search button {
     color: #ffffff !important;
-    background-color: var(--color-purple);
+    background-color: var(--purple);
     border: none;
     border-radius: 0;
     padding: 0px 10px;
@@ -486,7 +486,7 @@ footer ul {
 /* lg footer */
 #s-lib-footer-public {
     margin-top: 15px;
-    background-color: var(--color-gray);
+    background-color: var(--gray);
     border-top: 0;
 }
 
@@ -503,364 +503,91 @@ footer ul {
         padding-left: 10px !important;
         padding-right: 10px !important;
     }
-}
 
-
-@media (max-width: 576px) { 
-    
-    /* Mobile Hours */
-    th.s-lc-w-head {
-        display: flex;
-        flex-direction:column;
-    }
-    .s-lc-w-next {
-        float: none;
-        position: relative;
-        margin-bottom: 8px !important;
-        order: 2;
-    }
-    
-    .s-lc-w-previous {
-        float: none;
-        position: relative;
-        left: 0;
-        margin-bottom: 8px !important;
-        order: 1;
-    }
-    .s-lc-w-head > span {
-        width: 100%;
-        order: 0;
-        margin-bottom: 8px;
-    }
-    .s-lc-w-today-view-all {
-        text-align: center;
+    .footer-risd {
+        padding: 30px;
     }
 }
 
-.s-lib-header.container,
-#s-lg-guide-main,
-#s-lg-guide-tabs-title-bar,
-#s-lg-tabs-container {
-    margin-bottom: 0;
-    margin-top: 0;
+/*----------------------- New A-Z page tweaks -----------------------*/
+
+#s-lg-az-index button {
+    color: var(--near-black);
+    border-radius: 0;
 }
 
-.s-lib-header h1#s-lg-guide-name,
-h1#s-lib-public-header-title {
-    font-family: var(--font-secondary);
-    font-weight: 100;
-    font-size: 36px !important;
-    color: var(--guide-title);
+#s-lg-az-index .active-alpha {
+    background-color: var(--near-black);
+    color: var(--white);
+    border: none;
+}
+
+#az-search-col-1 > nav,
+.az-public-mobile-filters {
+    background-color: var(--mid-gray);
+    border-radius: 0;
+}
+
+#s-lg-az-filters {
+    padding: 0px 10px;
+}
+
+#s-lg-az-filter-cols div.row {
+    padding: 5px 
+}
+
+.az-public-mobile-filters input /* .form-control */ {
+    border-radius: 0;
+}
+
+/* modify mobile filters on a-z menu, may affect more, tbd */
+.form-group .selection > span {
+    background-color: var(--white);
+}
+
+.az-item .mt-3,
+.az-item .mb-3 {
+    margin: 0 !important;
+}
+
+.az-item button {
     padding: 0;
 }
 
-#s-lg-guide-header-info {
-    margin: 20px 0px;
+.az-description-full {
+    margin-top: 10px;
 }
 
-.s-lib-box-content {
-    padding: 12px 8px;
+a.az-title {
+    font-size: 18px;
 }
 
-.s-lib-box { 
-    box-shadow: none;
-    border: none !important;
+.sidebar-boxes {
+    margin-left: 15px;
 }
 
-.s-lib-public-side-header h2 {
-    color: var(--color-black);
-    font-size: 20px;
-}
-
-/* modify sub-Pages side nav tabs */
-.s-lg-tabs-side .s-lg-subtab-ul {
-    margin-left: 20px;
-}
-
-.s-lg-tabs-side .s-lg-subtab-ul > li {
-    margin-right: 0 !important;
-}
-
-.s-lg-tabs-side .s-lg-subtab-ul > li > a {
-    border-left: 2px solid var(--color-black) !important;
-}
-
-.s-lg-subtab-ul,
-.nav-stacked>li+li {
-    margin-top: 6px !important;
-}
-
-
-/* modify look of box-level side navigation */
-.s-lg-tabs-side .s-lg-boxnav .list-group-item {
-    border-radius: 0;
-    background-color: var(--color-white);
-    border-color: var(--subtab-border);
-}
-
-.s-lg-tabs-side .s-lg-boxnav .list-group-item:hover,
-.s-lg-tabs-side .s-lg-boxnav .list-group-item:focus {
-    background-color: var(--tab-color);
-}
-
-.s-lg-tabs-side .s-lg-boxnav .list-group-item a {
-    color: var(--black);
-    text-decoration: none;
-    font-size: 14px;
-}
-
-/* tabbed box */
-
-.s-lib-box-content .nav-tabs>li {
-    border: 1px solid var(--color-dark-gray);
-    background-color: var(--color-gray);
-    margin: 2px 5px 0px 0px;
-    border-bottom: none;
-}
-
-.s-lib-box-content .nav-tabs>li>a{
-    border-radius: 0px;
-}
-
-
-/* Box headers */
-
-h2.s-lib-box-title {
-    background-color: var(--color-white) !important;
-    text-transform: uppercase !important;
-    border-bottom: 2px solid var(--color-black) !important;
-    letter-spacing: .5px;
-    font-size: 20px !important;
-    font-family: var(--font-primary) !important;
-}
-
-/* Gradient box underline
-.s-lib-box .s-lib-box-title {
-border-bottom: 5px solid;
-border-radius: 0;
-border-image-slice: 1;
-border-image-source: linear-gradient(to left, #fff, #00a95c);
-} */
-
-/* Guide search */
-
-#s-lg-guide-search-form input {
-    box-shadow: none;
-    border: 0;
-    border-radius: 0;
-}
-
-input#s-lg-guide-search-terms {
-    border-bottom: 1px solid var(--color-black);
-    outline: 0;
-    padding-left: 10px;
-}
-
-.input-group-btn button.btn {
-    background-color: var(--color-blue);
-    color: var(--color-white);
+.sidebar-boxes > div > .accordion-item {
     border-radius: 0 !important;
-    border: 0;
-    margin-left: 16px !important;
 }
 
-/* ensure floating boxes have padding */
-.s-lib-floating-box {
-    padding: 10px;
+#s-lg-az-popular .accordion-item,
+#s-lg-az-trials h2.accordion-header > button {
+    background-color: var(--gray);
 }
 
-.s-lib-main {
-    padding-top: 25px;
+#s-lg-az-trials .accordion-item,
+#s-lg-az-trials h2.accordion-header > button {
+    background-color: #edffea;
 }
 
-/* tab spacing for top-nav only */
-#s-lg-guide-tabs .nav-tabs>li {
-    margin: 0px 6px 6px 0px;
-}
-
-/* tab borders */
-#s-lg-guide-tabs .nav-tabs>li>a,
-#s-lg-guide-tabs .nav-pills>li>a {
-    border: 1px solid var(--tab-borders);
-}
-#s-lg-guide-tabs .nav-pills>li>a {
-    border-left: 2px solid var(--color-black);
-}
-
-.nav-tabs>li>a {
-    margin-right: 0 !important;
-}
-
-#s-lg-er-content .nav-tabs li a {
-    color: var(--color-blue);
-}
-
-a.s-lg-tab-top-link.pull-left {
-    margin-right: 0px !important;
-}
-
-#s-lg-public-skiplink {
-    display: none;
-}
-
-.popover {
-    font-family: var(--font-primary);
-    font-weight: 100;
-}
-
-.popover-title {
-    font-size: 16px;
-}
-
-.s-ui-helptip {
-    color: var(--color-black);
-}
-
-.panel-heading > a {
-    color: var(--color-black);
-}
-
-#s-lg-guide-description {
+h2#s-lg-az-result-count {
+    font-family: var(--font-primary) !important;
     font-size: 14px;
 }
 
-/* un-bold various things - looks bad in RISD sans */
-.panel-heading .bold,
-.s-lg-small-bold,
-.s-lg-gtitle .bold,
-#s-lib-bc-list li,
-.s-lg-bold a, 
-#s-lg-guide-header-tags a,
-#s-lg-guide-tabs .nav-pills > li > a,
-#s-lg-guide-tabs .nav-tabs > li > a,
-a.s-lg-tab-top-link {
-    font-weight: 100 !important;
-}
-
-#s-lib-footer-login-link a, 
-#s-lib-footer-support-link a {
-    color: var(--link);
-    
-}
-
-/* Make E-Reserves titles bold */
-li.s-lg-er-item>a {
-    font-family: var(--font-primary);
-    font-weight: 700;
-}
-
-/* adjustments to tab dropdown menu */
-
-#s-lg-tabs-container .nav .dropdown-toggle .caret {
-    border-top-color: var(--color-black);
-    padding-bottom: 5px;
-}
-
-#s-lg-tabs-container .nav .dropdown-toggle .caret:hover,
-#s-lg-tabs-container .nav .dropdown-toggle .caret:focus {
-    padding-bottom: 5px;
-}
-
-#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop {
-    padding: 4px 10px 4px 8px;
-}
-
-#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop:hover,
-#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop:focus {
-    padding: 4px 10px 4px 8px;
-}
-
-.s-lg-tab-drop:hover > .caret,
-.s-lg-tab-drop:focus > .caret,
-li.active > .s-lg-tab-drop > .caret {
-    border-top-color: var(--color-white) !important;
-}
-
-
-/*--BUTTONS--*/
-
-.btn,
-button,
-a.button,
-.btn-info,
-.s-lib-profile-email .label-info {
-    cursor: pointer;
-    border-radius: 0;
-    border: 2px solid var(--color-blue);
-    background-color: transparent;
-    color: var(--color-blue);
-    font-weight: 100;
-    text-decoration: none;
-    transition-property: color, transparent;
-    transition-duration: .25s;
-    transition-timing-function: ease-out;
-   /* margin: 5px 5px 0px 0px; */
-}
-
-.widget-button {
-margin: 0px;
-}
-
-.btn-link {
-border: transparent !important;
-}
-
-a.button:active, button:active,
-a.button:focus, button:focus,
-a.button:hover, button:hover,
-.btn-info.active,
-.btn-info:focus,
-.btn-info:hover,
-.btn:active, .btn:hover, .btn:focus,
-.s-lib-profile-email .label-info:focus,
-.s-lib-profile-email .label-info:hover {
-    color: var(--color-white);
-    background-color: var(--color-blue);
-    border-color: var(--color-blue);
-}
-
-/* all guides index page */
-
-.nav-pills>li.active>button,
-.nav-pills>li.active>button:focus,
-.nav-pills>li.active>button:hover {
-    color: #fff;
-    background-color: var(--color-blue);
-    text-decoration: none;
-    border-radius: 0;
-}
-
-.nav .s-lg-index-nav-btn>button,
-#s-lg-az-index .btn-link {
-    color: var(--color-blue);
-}
-
-.nav .s-lg-index-nav-btn>button:hover {
-    border-radius: 0;
-}
-
-/* search widgets (impacts custom search boxes across guides)*/
-div.search-widget {
-    width: 100%;
-    display: flex;
-}
-.widget-input {
-    flex: 1 1 0%;
-    margin-right: 5px;
-    font-size: 14px;
-    padding-left: 5px;
-}
-
-fieldset.catalog-radio {
-    margin: 5px 0px;
-}
-
-.catalog-radio label{
-    margin-right: 1em;
-    font-weight: normal;
-    font-size: 14px;
-}
-
-.catalog-radio input {
-    margin: 0px 4px 0px 0px;
+#best-bets-box {
+    border-color: var(--pink);
+    border-radius: 2px;
+    background-color:#ffeef7;
+    padding: 20px;
 }
